@@ -11,6 +11,9 @@ export default {
       buttonTextColor: '#0a0a0a',
       white: '#FFFFFF',
       black: '#242424',
+      grey: '#F3F3F3',
+      'dark-grey': '#6B6B6B',
+      transparent: 'transparent',
     },
     fontSize: {
       'sm': '12px',

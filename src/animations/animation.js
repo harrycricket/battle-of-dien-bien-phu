@@ -1,11 +1,15 @@
 import { gsap } from "gsap";
 
-export const preLoaderAnim = () => {
+export const preLoaderAnim = (onComplete) => {
   const texts = document.querySelectorAll(".texts-container span");
   const preloader = document.querySelector(".preloader");
 
   gsap
-    .timeline()
+    .timeline({
+      onComplete: () => {
+        if (onComplete) onComplete();
+      },
+    })
     .fromTo(
       texts,
       { opacity: 0, y: 50 },

@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Context() {
-  return <div>Context</div>;
+  return <section id='context' className='min-h-[100vh] pt-[90px] bg-primaryBgColor'>Context</section>;
 }

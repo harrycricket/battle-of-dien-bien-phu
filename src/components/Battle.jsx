@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Battle() {
-  return <div>Battle</div>;
+  return <section id='battle' className='min-h-[100vh] pt-[90px] bg-primaryBgColor'>battle</section>;
 }

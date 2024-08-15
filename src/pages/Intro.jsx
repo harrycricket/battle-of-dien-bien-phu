@@ -3,7 +3,11 @@ import { preLoaderAnim } from "../animations/animation";
 
 const Intro = () => {
     useEffect(() => {
-        preLoaderAnim();
+        document.body.style.overflow = 'hidden';
+
+        preLoaderAnim(() => {
+            document.body.style.overflow = '';
+        });
     }, []);
 
     return (
@@ -16,7 +20,7 @@ const Intro = () => {
             }}
         >
             <div
-                className="absolute inset-0 bg-[#c7252e] opacity-70"
+                className="absolute inset-0 opacity-70"
                 style={{
                     backgroundColor: 'rgba(199, 37, 46, 0.5)',
                 }}
