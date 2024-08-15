@@ -52,14 +52,16 @@ const Navbar = () => {
     return (
         // <header className="navbar flex items-center justify-between xl:justify-start w-full bg-white border-b border-white shadow-md">
         <header className="navbar flex items-center justify-between xl:justify-start w-full bg-primaryBgColor border-b border-primaryBgColor shadow-md">
-            <div className="flex flex-col items-center justify-center">
-                <span className="text-primaryTextColor text-[18px] font-bold relative p-1">
-                    Chiến dịch
-                </span>
-                <span className="text-primaryTextColor text-2xl font-bold relative p-1">
-                    Điện Biên Phủ
-                </span>
-            </div>
+            <a href="#home">
+                <div className="flex flex-col items-center justify-center">
+                    <span className="text-primaryTextColor text-[18px] font-bold relative p-1">
+                        Chiến dịch
+                    </span>
+                    <span className="text-primaryTextColor text-2xl font-bold relative p-1">
+                        Điện Biên Phủ
+                    </span>
+                </div>
+            </a>
             <nav
                 className={`text-2xl flex-1 flex flex-row items-center justify-center gap-10 transition-all duration-500 z-50`}
             >
@@ -108,12 +110,12 @@ const Navbar = () => {
                     >
                         <div className="absolute top-[-24px] left-0 w-full h-7 bg-transparent rounded-t-md"></div>
                         <ul className="text-black text-lg">
-                            {language === 'jp' ? (<>                                
+                            {language === 'jp' ? (<>
                                 <li className="p-2 hover:text-primaryTextColor cursor-pointer" onClick={() => dispatch(switchToVietnamese())}>Vietnamese</li>
                                 <li className="p-2 text-primaryTextColor hover:text-primaryTextColor cursor-pointer" onClick={() => dispatch(switchToJapanese())}>Japanese</li>
                             </>) : (<>
                                 <li className="p-2 text-primaryTextColor hover:text-primaryTextColor cursor-pointer" onClick={() => dispatch(switchToVietnamese())}>Vietnamese</li>
-                                <li className="p-2 hover:text-primaryTextColor cursor-pointer" onClick={() => dispatch(switchToJapanese())}>Japanese</li>                                
+                                <li className="p-2 hover:text-primaryTextColor cursor-pointer" onClick={() => dispatch(switchToJapanese())}>Japanese</li>
                             </>)}
 
                         </ul>
