@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className='mx-auto pt-20 px-24'>
+      <div className='mx-auto pt-20 px-20'>
         <Context />
         <Battle />
         <Conclusion />
