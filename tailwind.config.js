@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
       // primaryTextColor: '#9C1621',
@@ -12,12 +9,22 @@ export default {
       primaryBgColor: '#EADDBD',
       secondBgColor: '#EBE0C0',
       buttonTextColor: '#0a0a0a',
+      white: '#FFFFFF',
+      black: '#242424',
+    },
+    fontSize: {
+      'sm': '12px',
+      'base': '14px',
+      'xl': '16px',
+      '2xl': '20px',
+      '3xl': '28px',
+      '4xl': '38px',
+      '5xl': '50px',
     },
     extend: {
       fontFamily: {
-        sans: ['Helvetica', 'Arial', 'Inter', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
-        mono: ['Menlo', 'monospace'],
+        inter: ["'Inter'", "sans-serif"],
+        gelasio: ["'Gelasio'", "serif"],
       },
       backgroundImage: {
         'buttonBgColor': 'linear-gradient(to right, #7dd3fc, #bae6fd)',
