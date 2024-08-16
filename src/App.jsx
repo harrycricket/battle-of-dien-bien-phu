@@ -15,8 +15,8 @@ function App() {
       <Home />
       <Context />
       <Battle />
-      <Conclusion />
       <Hero />
+      <Conclusion />
       <Footer />
     </>
   );

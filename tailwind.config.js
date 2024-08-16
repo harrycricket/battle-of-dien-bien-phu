@@ -14,6 +14,8 @@ export default {
       grey: '#F3F3F3',
       'dark-grey': '#6B6B6B',
       transparent: 'transparent',
+      yellow: '#fcde6e',
+      'PrimaryBgTien': '#fff9e4',
     },
     fontSize: {
       'sm': '12px',
@@ -31,6 +33,9 @@ export default {
       },
       backgroundImage: {
         'buttonBgColor': 'linear-gradient(to right, #7dd3fc, #bae6fd)',
+      },
+      screens: {
+        '3xl': '1700px',
       },
     },
   },
