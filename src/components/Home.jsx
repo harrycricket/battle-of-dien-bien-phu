@@ -1,7 +1,73 @@
-import React from 'react';
+import gsap from 'gsap';
+import React, { useEffect, useRef } from 'react';
 import ReactPlayer from 'react-player';
 
 const Home = () => {
+
+  const textRef = useRef(null);
+  const paragraphRef = useRef(null);
+
+  useEffect(() => {
+    const chars = textRef.current.querySelectorAll('.char');
+    const paragraphChars = paragraphRef.current.querySelectorAll('.char');
+
+    const timeline = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+
+    timeline.fromTo(
+      chars,
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.05,
+        duration: 0.5,
+        ease: 'power2.out',
+      }
+    );
+
+    timeline.to(
+      chars,
+      {
+        opacity: 0,
+        y: 20,
+        stagger: 0.05,
+        duration: 0.5,
+        ease: 'power2.in',
+        delay: 1,
+      }
+    );
+
+    const paragraphTimeline = gsap.timeline({ repeat: -1, repeatDelay: 2 });
+
+    paragraphTimeline.fromTo(
+      paragraphChars,
+      { opacity: 0 },
+      {
+        opacity: 1,
+        stagger: 0.03,
+        duration: 0.4,
+        ease: 'power2.out',
+      }
+    );
+
+    paragraphTimeline.to(
+      paragraphChars,
+      {
+        opacity: 0,
+        stagger: 0.03,
+        duration: 0.4,
+        ease: 'power2.in',
+        delay: 1,
+      }
+    );
+  }, []);
+
+  const text1 = 'CHIẾN DỊCH';
+  const text2 = 'ĐIỆN BIÊN PHỦ';
+  const paragraphText = `Đây là chiến thắng quân sự lớn nhất trong cuộc Chiến tranh Đông Dương (1945 – 1954) của Việt Nam.
+  Với thắng lợi quyết định này, lực lượng Quân đội Nhân dân Việt Nam do Đại tướng Võ Nguyên Giáp chỉ huy
+  đã buộc quân Pháp và chính quyền Quốc Gia Việt Nam tại Điện Biên Phủ phải đầu hàng vào ngày 7 tháng 5 năm
+  1954, sau suốt 2 tháng cầm cự.`;
 
   return (
     <section
@@ -45,9 +111,19 @@ const Home = () => {
         />
       </div>
 
-      <div className='absolute top-[28vh] left-[21vw] 3xl:left-[16vw]'>
-        <h1 className="text-white text-[50px] 3xl:text-[80px] font-extrabold mb-6" style={{ position: 'relative', top: '50px', left: '20px' }}>
-          CHIẾN DỊCH<br /> ĐIỆN BIÊN PHỦ
+      <div className='absolute top-[31vh] left-[19vw] 3xl:left-[16vw]' ref={textRef}>
+        <h1 className="text-white text-[55px] 3xl:text-[80px] font-extrabold mb-6">
+          {text1.split('').map((char, index) => (
+            <span key={index} className="char">
+              {char}
+            </span>
+          ))}
+          <br />
+          {text2.split('').map((char, index) => (
+            <span key={index} className="char">
+              {char}
+            </span>
+          ))}
         </h1>
       </div>
 
@@ -71,7 +147,7 @@ const Home = () => {
         </div>
         <div className="flex-1 text-black bg-yellow p-6 pt-12 rounded-lg shadow-lg">
           <div className="absolute bottom-44 3xl:bottom-52 right-0 flex w-auto justify-end gap-4">
-            <div className="w-[200px] h-[100px] 3xl:w-[270px] 3xl:h-[150px] overflow-hidden rounded-md">
+            <div className="w-[230px] h-[130px] 3xl:w-[270px] 3xl:h-[150px] overflow-hidden rounded-md">
               <ReactPlayer
                 url="70Y-DienBienPhu.mp4"
                 controls
@@ -83,18 +159,19 @@ const Home = () => {
             <img
               src="win.jpg"
               alt="Image 1"
-              className="w-[200px] h-[100px] 3xl:w-[250px] 3xl:h-[150px] object-cover rounded-md"
+              className="w-[230px] h-[130px] 3xl:w-[250px] 3xl:h-[150px] object-cover rounded-md"
               style={{ boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}
             />
           </div>
 
 
           <h2 className="text-2xl 3xl:text-3xl font-bold mb-1">CHIẾN DỊCH ĐIỆN BIÊN PHỦ</h2>
-          <p className='text-base 3xl:text-xl'>
-            Đây là chiến thắng quân sự lớn nhất trong cuộc Chiến tranh Đông Dương (1945 – 1954) của Việt Nam.
-            Với thắng lợi quyết định này, lực lượng Quân đội Nhân dân Việt Nam do Đại tướng Võ Nguyên Giáp chỉ huy
-            đã buộc quân Pháp và chính quyền Quốc Gia Việt Nam tại Điện Biên Phủ phải đầu hàng vào ngày 7 tháng 5 năm
-            1954, sau suốt 2 tháng cầm cự.
+          <p ref={paragraphRef} className='text-base 3xl:text-xl'>
+            {paragraphText.split('').map((char, index) => (
+              <span key={index} className="char">
+                {char}
+              </span>
+            ))}
           </p>
         </div>
       </div>

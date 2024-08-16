@@ -6,12 +6,14 @@ import Footer from './components/Footer';
 import Intro from './pages/Intro';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Language from './components/Language';
 
 function App() {
   return (
     <>
       <Intro />
       <Navbar />
+      <Language />
       <Home />
       <Context />
       <Battle />
