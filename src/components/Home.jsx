@@ -36,7 +36,7 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 11 : 0
+        firstTimeRef.current ? 11.3 : 0
       );
 
       timeline.fromTo(
@@ -53,7 +53,7 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 11 : 0
+        firstTimeRef.current ? 11.3 : 0
       );
 
       timeline.fromTo(
@@ -70,14 +70,14 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 11.5 : 0.5
+        firstTimeRef.current ? 11.7 : 0.5
       );
 
       timeline.fromTo(
         fistRef.current,
         { y: '100%', opacity: 0 },
         { y: '0%', opacity: 1, duration: 1.5, ease: 'power2.out' },
-        0
+        firstTimeRef.current ? 11.3 : 0
       );
 
       additionalTexts.forEach((el, index) => {
@@ -91,7 +91,7 @@ const Home = () => {
             duration: 0.5,
             ease: 'power2.out',
           },
-          firstTimeRef.current ? 11 : 0
+          firstTimeRef.current ? 11.3 : 0
         );
       });
 
@@ -109,7 +109,7 @@ const Home = () => {
           duration: 2,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 11 : 0
+        firstTimeRef.current ? 11.3 : 0
       );
       firstTimeRef.current = false;
     };
