@@ -10,7 +10,7 @@ import SwiperSection from './SwiperSection';
 const SwiperComponent = () => {
   return (
     <div className="h-screen w-screen overflow-hidden">
-      <SwiperSection>
+      <SwiperSection index={1}>
         <SwiperSlide>
           <Context1 />
         </SwiperSlide>
