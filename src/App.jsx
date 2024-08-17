@@ -4,11 +4,11 @@ import Battle from './components/Battle';
 import Conclusion from './components/Conclusion';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
-import Intro from './pages/Intro';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Language from './components/Language';
 import { Victory } from './components/Victory';
+import Intro from './pages/Intro';
 import { useEffect } from 'react';
 import useSessionTransitionState from './hooks/useSessionTransitionState';
 
@@ -38,7 +38,7 @@ function App() {
   return (
     <>
       <NextUIProvider>
-        {/* <Intro /> */}
+        <Intro />
         <Navbar />
         <Language />
         <Home />

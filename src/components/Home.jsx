@@ -1,5 +1,5 @@
 import gsap from 'gsap';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
   const fistRef = useRef(null);
   const homeRef = useRef(null);
   const additionalTextRefs = useRef([]);
+  const firstTimeRef = useRef(true);
 
   useEffect(() => {
     const animateHome = () => {
@@ -34,7 +35,8 @@ const Home = () => {
           },
           duration: 0.5,
           ease: 'power2.out',
-        }
+        },
+        firstTimeRef.current ? 11 : 0
       );
 
       timeline.fromTo(
@@ -51,7 +53,7 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        0
+        firstTimeRef.current ? 11 : 0
       );
 
       timeline.fromTo(
@@ -68,7 +70,7 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        0.5
+        firstTimeRef.current ? 11.5 : 0.5
       );
 
       timeline.fromTo(
@@ -89,7 +91,7 @@ const Home = () => {
             duration: 0.5,
             ease: 'power2.out',
           },
-          0
+          firstTimeRef.current ? 11 : 0
         );
       });
 
@@ -104,11 +106,12 @@ const Home = () => {
             from: 'start',
             axis: 'y',
           },
-          duration: 5,
+          duration: 2,
           ease: 'power2.out',
         },
-        0
+        firstTimeRef.current ? 11 : 0
       );
+      firstTimeRef.current = false;
     };
 
     const observer = new IntersectionObserver(
@@ -146,6 +149,7 @@ const Home = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
+      <div className="absolute top-0 left-0 bg-black opacity-50 w-[50vw] h-[100vh]" />
       <div className='absolute top-2 left-[50.75%] 3xl:left-[51.2%] transform -translate-x-1/2'>
         <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
           <span className="text-white relative">
@@ -163,12 +167,12 @@ const Home = () => {
         <h1 className="font-semibold mb-6">
           <span className="text-black text-base 3xl:text-2xl ps-1 font-extrabold vertical-text relative">
             {`ĐIỆN BIÊN PHỦ`.split('').map((char, index) => (
-              <span key={index} className="char">{char}</span>
+              <span key={index} className="char text-black">{char}</span>
             ))}
           </span>
           <span className="text-black text-[90px] 3xl:text-[120px] leading-[90px] font-extrabold vertical-text relative">
             {`1954`.split('').map((char, index) => (
-              <span key={index} className="char">{char}</span>
+              <span key={index} className="char text-black">{char}</span>
             ))}
           </span>
         </h1>

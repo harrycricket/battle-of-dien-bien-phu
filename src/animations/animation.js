@@ -17,24 +17,14 @@ export const preLoaderAnim = (onComplete) => {
         opacity: 1,
         y: 0,
         stagger: 0.2,
-        duration: 0.5,
-        ease: "power3.out",
-      }
-    )
-    .to(
-      texts,
-      {
-        opacity: 0,
-        y: -50,
-        stagger: 0.3,
-        duration: 0.5,
+        duration: 0.1,
         ease: "power3.in",
       },
-      "+=1"
     )
+    .to({}, { duration: 2 }) 
     .to(preloader, {
       opacity: 0,
-      duration: 0.5,
+      duration: 2,
       ease: "power3.inOut",
       onComplete: () => {
         preloader.style.display = "none";
