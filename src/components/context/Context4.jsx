@@ -68,7 +68,7 @@ export default function Context4() {
                 marginTop: "4px",
                 fontStyle: 'italic',
               }}
-              >Điện Biên Phủ là tập đoàn cứ điểm mạnh nhưng chỗ yếu cơ bản của ​địch là bị cô lập</span>
+              >Điện Biên Phủ là tập đoàn cứ điểm mạnh nhưng chỗ yếu cơ bản của địch là bị cô lập</span>
             </div>
           </div>
           <div className="relative w-full h-fit mt-6 pr-52 flex justify-end">
@@ -93,7 +93,7 @@ export default function Context4() {
                 marginTop: "4px",
                 fontStyle: 'italic',
               }}
-              >Bộ chính trị chọn Điện Biên Phủ làm điểm quyết chiến chiến lược và ​bắt đầu chiến dịch Điện Biên Phủ lịch sử</span>
+              >Bộ chính trị chọn Điện Biên Phủ làm điểm quyết chiến chiến lược và bắt đầu chiến dịch Điện Biên Phủ lịch sử</span>
             </div>
           </div>
         </div>
