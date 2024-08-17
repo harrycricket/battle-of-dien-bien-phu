@@ -48,7 +48,7 @@ export default function Context3() {
         <div className="right-side pt-[100px]">
           <section className="space-y-9 bg-yellow-50 font-sans mt-4 pr-8">
             <div className="bg-yellow-500 text-black p-6 rounded-md shadow-md" style={{ backgroundColor: 'rgba(252, 222, 110, 0.6)' }}>
-              <h2 className="text-lg font-bold mb-4">TẬP TRUNG BINH LỰC, "QUẢ ĐẤM THÉP" QUYẾT CHIẾN VỚI VIỆT MINH</h2>
+              <h2 className="text-lg font-bold mb-4">TẬP TRUNG BINH LỰC, &quot;QUẢ ĐẤM THÉP&quot; QUYẾT CHIẾN VỚI VIỆT MINH</h2>
               <ul className="list-disc pl-6 space-y-2 italic">
                 <li>Tăng viện lớn về binh lực và chi phí chiến tranh</li>
                 <li>Pháp và Mỹ lập kế hoạch đến năm 1954 quân chủ lực Pháp  có 7 sư đoàn <br />  cơ động chiến lược với 27 binh đoàn làm nắm đấm thép</li>
