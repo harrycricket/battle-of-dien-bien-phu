@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Intro from './pages/Intro';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Language from './components/Language';
 import { Victory } from './components/Victory';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <Intro />
       <Navbar />
+      <Language />
       <Home />
       <Context />
       <Battle />
