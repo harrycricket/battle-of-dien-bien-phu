@@ -1,4 +1,4 @@
-export default function Context1() {
+export default function Context3() {
   return (
     <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative"
     >

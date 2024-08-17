@@ -55,6 +55,7 @@ html {
 }
 
 .context-content .right-side {
+  position: relative;
   flex-grow: 1;
   padding-left: 40px;
   /* align-items: center; */

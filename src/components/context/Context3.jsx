@@ -1,4 +1,4 @@
-export default function Context1() {
+export default function Context3() {
   return (
     <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative"
     >
@@ -26,7 +26,7 @@ export default function Context1() {
       <div className="context-content">
         <div className="left-side"
           style={{
-            backgroundImage: `url('/images/context/context-nava.webp')`,
+            backgroundImage: `url('/images/context/context-nhaydu1.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: `left center`,
             backgroundRepeat: 'no-repeat',
@@ -34,43 +34,65 @@ export default function Context1() {
           <div className="context-content-title">
             <span style={{
               fontSize: "28px"
-            }}>07/1953</span>
+            }}>20/11/1953</span>
             <br />
             <span style={{
               display: "inline-block",
               fontSize: "24px",
               marginTop: "4px"
             }}
-              className="uppercase">Thực dân Pháp và can thiệp Mỹ <br />
-              đã cho ra đời Kế hoạch Nava</span>
+              className="uppercase">BỘ CHỈ HUY QUÂN VIỄN CHINH PHÁP ĐÃ<br />
+              CHO QUÂN NHẢY DÙ CHIẾM ĐIỆN BIÊN PHỦ</span>
           </div>
         </div>
-        <div className="right-side pt-[100px]">
-          <section className="space-y-8 bg-yellow-50 font-sans">
-            <div className="bg-yellow-500 text-black p-6 rounded-md shadow-md">
-              <h2 className="text-lg font-bold mb-4">TẬP TRUNG BINH LỰC, "QUẢ ĐẤM THÉP" QUYẾT CHIẾN VỚI VIỆT MINH</h2>
-              <ul className="list-disc pl-6 space-y-2 italic">
-                <li>Tăng viện lớn về binh lực và chi phí chiến tranh</li>
-                <li>Pháp và Mỹ lập kế hoạch đến năm 1954 quân chủ lực Pháp  có 7 sư đoàn <br />  cơ động chiến lược với 27 binh đoàn làm nắm đấm thép</li>
-              </ul>
+        <div className="right-side pt-[100px]" style={{
+          top: '10vh',
+          left: '-240px'
+        }}>
+          <div className="absolute w-full h-fit">
+            <img
+              src="/images/context/context-nhaydu2.jpg"
+              alt="Description of image"
+              style={{
+                height: '320px',
+                objectFit: 'contain',
+                objectPosition: 'left top'
+              }}
+            />
+            <div className="context-content-detail absolute -top-[28px] -right-[32px] max-w-[540px]"
+              style={{ background: 'rgba(252, 222, 110, 0.82)', padding: '20px 32px', }}>
+              <span style={{
+                fontSize: "14px",
+              }}>CỤC DIỆN CHIẾN SỰ CÓ MỘT SỰ BIẾN CHUYỂN MỚI</span>
+              <br />
+              <span style={{
+                display: "inline-block",
+                fontSize: "14px",
+                fontWeight: 400,
+                marginTop: "4px",
+                fontStyle: 'italic',
+
+              }}
+              >vào thời điểm các cuộc tiến công Đông - Xuân của ta chuẩn bị bắt đầu và liên tiếp giành thắng lợi</span>
             </div>
 
-            <div className="bg-yellow-300 text-black p-6 rounded-md shadow-md">
-              <h2 className="text-lg font-bold mb-4">MƯU TOAN TRONG VÒNG 18 THÁNG</h2>
-              <ul className="list-disc pl-6 space-y-2 italic">
-                <li>sẽ tiêu diệt phần lớn bộ đội chủ lực của ta, kiểm soát lãnh thổ Việt Nam <br />và bình định cả Nam Đông Dương.</li>
-              </ul>
-            </div>
+            <div className="context-content-detail absolute -bottom-[-28px] -right-[52px] max-w-[540px]"
+              style={{ background: 'rgba(252, 222, 110, 0.82)', padding: '20px 32px', }}>
+              <span style={{
+                fontSize: "14px",
+              }}>ĐỊCH PHÁT HIỆN SỰ DI CHUYỂN CỦA MỘT BỘ PHẬN CHỦ LỰC TA LÊN HƯỚNG TÂY BẮC</span>
+              <br />
+              <span style={{
+                display: "inline-block",
+                fontSize: "14px",
+                fontWeight: 400,
+                marginTop: "4px",
+                fontStyle: 'italic',
 
-            <div className="bg-yellow-500 text-black p-6 rounded-md shadow-md">
-              <h2 className="text-lg font-bold mb-4">LÀ NỖ LỰC CUỐI CÙNG CỦA THỰC DÂN PHÁP VÀ CAN THIỆP MỸ</h2>
-              <ul className="list-disc pl-6 space-y-2 italic">
-                <li>nhằm giành lại thế chủ động có tính quyết định về quân sự trên chiến trường</li>
-                <li>làm cơ sở cho một giải pháp chính trị có lợi cho chúng</li>
-              </ul>
+              }}
+              >địch quyết định dùng một bộ phận lực lượng cơ động, nhảy dù đánh chiếm Điện Biên Phủ</span>
             </div>
-
-          </section>
+          </div>
         </div>
       </div>
 
