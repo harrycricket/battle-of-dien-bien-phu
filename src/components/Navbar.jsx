@@ -15,6 +15,7 @@ const Navbar = () => {
             top: position,
             behavior: 'smooth'
         });
+        console.log("INDEX in NavBar ", index)
     }, [index]);
 
     useEffect(() => {

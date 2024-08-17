@@ -1,49 +1,50 @@
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Swiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import useSessionTransitionState from '../hooks/useSessionTransitionState';
 
-const SwiperSection = ({ children }) => {
+const SwiperSection = ({ index, children }) => {
     const swiperRef = useRef(null);
-    const { onNextSession, onPrevSession } = useSessionTransitionState();
+    const { setIsBeginning, setIsEnd } = useSessionTransitionState();
 
-    const handleMousewheel = (event) => {
-        console.log("handleMousewheel");
-
+    const handleWheel = (event) => {
         if (swiperRef.current) {
-            console.log("swiperRef.current", swiperRef.current);
-            const swiper = swiperRef.current.swiper;
-
             if (event.deltaY > 0) {
-                console.log("swiper.isEnd", swiper.isEnd);
-                if (swiper.isEnd) {
-                    onNextSession();
-                } else {
-                    swiper.slideNext();
-                }
-            } else { // Scroll up
-                console.log("swiper.isBeginning", swiper.isBeginning);
-                if (swiper.isBeginning) {
-                    onPrevSession();
-                } else {
-                    swiper.slidePrev();
-                }
+                swiperRef.current.swiper.slideNext(); // Scroll down - next slide
+            } else {
+                swiperRef.current.swiper.slidePrev(); // Scroll up - previous slide
             }
         }
     };
+
+    useEffect(() => {
+        document.addEventListener('wheel', handleWheel, { passive: false });
+
+        return () => {
+            document.removeEventListener('wheel', handleWheel);
+        };
+    }, []);
 
     return (
         <Swiper
             ref={swiperRef}
             spaceBetween={0}
             slidesPerView={1}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
-            onTouchMove={handleMousewheel}
-            onWheel={handleMousewheel}
+            onSwiper={(swiper) => {
+                setIsBeginning(index, swiper.isBeginning);
+                setIsEnd(index, swiper.isEnd);
+                console.log("swiper of " + index + " : ", swiper.isBeginning, swiper.isEnd)
+            }}
+            onSlideChange={(swiper) => {
+                setIsBeginning(index, swiper.isBeginning);
+                setIsEnd(index, swiper.isEnd);
+                console.log("swiper of " + index + " : ", swiper.isBeginning, swiper.isEnd)
+            }}
             autoplay={false}
+            // mousewheel={true}
+            keyboard={true}
         >
             {children}
         </Swiper>
@@ -52,6 +53,7 @@ const SwiperSection = ({ children }) => {
 
 // Define propTypes
 SwiperSection.propTypes = {
+    index: PropTypes.number.isRequired,
     children: PropTypes.node.isRequired, // Define 'children' as required and of type 'node'
 };
 
