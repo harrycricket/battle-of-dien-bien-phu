@@ -17,6 +17,7 @@ function App() {
   const handleWheel = (event) => {
     console.log("event.deltaY: ", event.deltaY);
     console.log("index: ", index);
+    console.log("getIsBegin(index): ", getIsBeginning(index));
     console.log("getIsEnd(index): ", getIsEnd(index));
     console.log("------------------------------------");
     if (event.deltaY > 0 && !getIsEnd(index)) {
