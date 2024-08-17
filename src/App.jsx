@@ -1,3 +1,4 @@
+import { NextUIProvider } from '@nextui-org/react';
 import Context from './components/Context';
 import Battle from './components/Battle';
 import Conclusion from './components/Conclusion';
@@ -10,8 +11,8 @@ import Language from './components/Language';
 
 function App() {
   return (
-    <>
-      <Intro />
+    <NextUIProvider>
+      {/* <Intro /> */}
       <Navbar />
       <Language />
       <Home />
@@ -20,7 +21,7 @@ function App() {
       <Hero />
       <Conclusion />
       <Footer />
-    </>
+    </NextUIProvider>
   );
 }
 
