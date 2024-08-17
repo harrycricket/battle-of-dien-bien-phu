@@ -1,21 +1,46 @@
 // import { useEffect } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useSessionTransitionState from "../hooks/useSessionTransitionState";
 
 const Navbar = () => {
     const { index, getSession, setSession } = useSessionTransitionState();
+    const [isScrolling, setIsScrolling] = useState(false);
 
     const handleMenuClick = (menu) => {
         setSession(menu);
     };
 
     useEffect(() => {
+        setIsScrolling(true);
+
         const position = index * window.innerHeight;
         window.scrollTo({
             top: position,
-            behavior: 'smooth'
+            behavior: 'smooth',
         });
+
+        const scrollTimeout = setTimeout(() => {
+            setIsScrolling(false);
+        }, 500);
+
+        return () => {
+            clearTimeout(scrollTimeout);
+        };
     }, [index]);
+
+    const handleWheel = (event) => {
+        if (isScrolling) {
+            event.preventDefault();
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('wheel', handleWheel, { passive: false });
+
+        return () => {
+            document.removeEventListener('wheel', handleWheel);
+        };
+    }, [isScrolling]);
 
     useEffect(() => {
         const sections = document.querySelectorAll("section");
