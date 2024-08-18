@@ -1,6 +1,7 @@
 import gsap from 'gsap';
 import React, { useEffect, useRef, useState } from 'react';
 import ReactPlayer from 'react-player';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
   const textRef = useRef(null);
@@ -11,6 +12,7 @@ const Home = () => {
   const homeRef = useRef(null);
   const additionalTextRefs = useRef([]);
   const firstTimeRef = useRef(true);
+  const language = useSelector((state) => state.language.language);
 
   useEffect(() => {
     const animateHome = () => {
@@ -132,10 +134,13 @@ const Home = () => {
   const text1 = 'CHIẾN DỊCH';
   const text2 = 'ĐIỆN BIÊN PHỦ';
   const text3 = 'CHIẾN DỊCH ĐIỆN BIÊN PHỦ';
-  const paragraphText = `Đây là chiến thắng quân sự lớn nhất trong cuộc Chiến tranh Đông Dương (1945 – 1954) của Việt Nam.
+  const paragraphText = language === "vi" ? `Đây là chiến thắng quân sự lớn nhất trong cuộc Chiến tranh Đông Dương (1945 – 1954) của Việt Nam.
   Với thắng lợi quyết định này, lực lượng Quân đội Nhân dân Việt Nam do Đại tướng Võ Nguyên Giáp chỉ huy
   đã buộc quân Pháp và chính quyền Quốc Gia Việt Nam tại Điện Biên Phủ phải đầu hàng vào ngày 7 tháng 5 năm
-  1954, sau suốt 2 tháng cầm cự.`;
+  1954, sau suốt 2 tháng cầm cự.` : `これは、インドシナ戦争 (1945 ～ 1954 年) におけるベトナムにとって最大の軍事勝利でした。
+ この決定的な勝利により、ベトナム人民軍はボー・グエン・ザップ将軍によって指揮された。
+ 2019年5月7日、ディエンビエンフーのフランス軍とベトナム国民政府を降伏させた。
+ 2か月の持ちこたえの後の1954年。`;
 
   return (
     <section
