@@ -1,6 +1,7 @@
 import { NextUIProvider } from '@nextui-org/react';
 import Context from './components/Context';
 import Battle from './components/Battle';
+import Tactic from './components/Tactic';
 import Conclusion from './components/Conclusion';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
@@ -41,15 +42,16 @@ function App() {
   return (
     <>
       <NextUIProvider>
-        <Intro />
+        {/* <Intro /> */}
         <Navbar />
         <Language />
         <Home />
         <Context />
         <Battle />
         <Victory />
-        <Hero />
+        <Tactic />
         <Conclusion />
+        <Hero />
         {/* <Footer /> */}
       </NextUIProvider>
     </>
