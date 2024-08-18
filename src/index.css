@@ -30,6 +30,13 @@ html {
     transform: rotate(180deg);
     text-orientation: mixed;
   }
+
+  .vertical-text-jp {
+    writing-mode: vertical-rl;
+    transform: rotate(0deg);
+    text-orientation: mixed;
+  }
+
   .colorful-text {
     font-size: 24px;
     background: linear-gradient(to right, #084e9c, #f27123, #51b748);
