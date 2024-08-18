@@ -8,7 +8,7 @@ export default {
       secondaryTextColor: '#171914',
       primaryBgColor: '#EADDBD',
       secondBgColor: '#EBE0C0',
-      rgbaBgColor: '#fcde6e',
+      rgbaBgColor: 'rgba(255, 255, 255, 0.7)',
       buttonTextColor: '#0a0a0a',
       white: '#FFFFFF',
       black: '#242424',
