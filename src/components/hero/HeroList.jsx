@@ -15,7 +15,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 import Hero from "./Hero";
-import Trancan from "../../assets/heroes/Trancan.jpg";
+import TranCan from "../../assets/heroes/TranCan.jpg";
 import BeVanDan from "../../assets/heroes/BeVanDan.jpeg";
 import ToVinhDien from "../../assets/heroes/ToVinhDien.jpeg";
 import PhanDinhGiot from "../../assets/heroes/PhanDinhGiot.jpeg";
@@ -43,8 +43,7 @@ const heroes = [
       "NGƯỜI CẮM LÁ CỜ CHIẾN THẮNG ĐẦU TIÊN Ở CHIẾN DỊCH ĐIỆN BIÊN PHỦ",
     japanese: "ディエンビエンフー作戦で最初に勝利の旗を掲げた人",
     year: "1931 - 1954",
-    // image: BeVanDan,
-    image: Trancan,
+    image: TranCan,
   },
   {
     fullName: "Bế Văn Đàn",
