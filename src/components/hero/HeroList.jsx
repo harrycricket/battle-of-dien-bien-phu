@@ -1,5 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useSelector } from "react-redux";
 
 // Import Swiper styles
 import "swiper/css";
@@ -199,16 +200,24 @@ const heroes = [
 ];
 
 export default function HeroList() {
+  const language = useSelector((state) => state.language.language);
+  const isVietnamese = language == "vi";
   return (
     <section
       id="hero-list"
       className=" bg-primaryBgColor h-[100vh] w-screen overflow-hidden flex flex-col justify-center"
     >
       {/* Những anh hùng tiêu biểu */}
-      
-      <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
-        NHỮNG ANH HÙNG TIÊU BIỂU KHÁC
-      </h2>
+      {isVietnamese ? (
+        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+          NHỮNG ANH HÙNG TIÊU BIỂU KHÁC
+        </h2>
+      ) : (
+        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+          他の代表的な英雄たち
+        </h2>
+      )}
+
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -238,7 +247,8 @@ export default function HeroList() {
           <SwiperSlide key={index} className="bg-center bg-cover w-[600px]">
             <Hero
               fullName={hero.fullName.toUpperCase()}
-              description={hero.description.toUpperCase()}
+              // description={hero.description.toUpperCase()}
+              description={isVietnamese ? hero.description.toUpperCase() : hero.japanese}
               year={hero.year}
               image={hero.image}
             />
