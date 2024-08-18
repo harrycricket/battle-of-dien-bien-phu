@@ -56,7 +56,7 @@ export default function Tactic1() {
           textTransform: 'uppercase',
         }}
       >
-        <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
+        <h1 className="text-3xl 3xl:text-[30px] font-semibold mb-6">
           <span className="text-[#ffd22f] relative">
           Phương châm&nbsp;
             <span className="absolute -bottom-1 right-[2px] 3xl:-right-[1px] h-[2.5px] w-full bg-white"></span>
