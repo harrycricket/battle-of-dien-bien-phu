@@ -45,6 +45,7 @@ export default function Tactic1() {
       id='tactic'
       className='h-[100vh] pt-[28px] bg-primaryBgColor relative'
     >
+      
       <h2
         className='context-title w-full text-center'
         style={{
@@ -53,25 +54,25 @@ export default function Tactic1() {
           lineHeight: 1.4,
           textAlign: 'center',
           textTransform: 'uppercase',
-          textShadow:
-            '0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)',
         }}
       >
-        <span className='relative' style={{ color: '#fcde6e' }}>
+        <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
+          <span className="text-[#ffd22f] relative">
           Phương châm&nbsp;
-          <span className='absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow'></span>
-        </span>
-        <span className='relative'>
+            <span className="absolute -bottom-1 right-[2px] 3xl:-right-[1px] h-[2.5px] w-full bg-white"></span>
+          </span>
+          <span className="text-[#ffd22f] relative">
           tác chiến
-          <span className='absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black'></span>
-        </span>
+            <span className="absolute -bottom-1 -left-[2px] 3xl:-left-[1px] h-[2.5px] w-full bg-white"></span>
+          </span>
+        </h1>
       </h2>
       <div className='context-content' ref={leftSideRef}>
         <div
           className='left-side min-w-full opacity-80'
           ref={leftSideRef}
           style={{
-            backgroundImage: `url('/images/battle/bg.jpg')`,
+            backgroundImage: `url('/images/battle/keophao.jpg')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'left',

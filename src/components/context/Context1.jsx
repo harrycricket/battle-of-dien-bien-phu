@@ -41,7 +41,7 @@ export default function Context1() {
   const isVietnamese = language == "vi";
   if (isVietnamese)
     return (
-      <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative">
+      <section id="context" className="h-[100vh] pt-[28px] bg-[#fef6d9] relative">
         <h2
           className="context-title w-full text-center"
           style={{
@@ -50,17 +50,19 @@ export default function Context1() {
             lineHeight: 1.4,
             textAlign: "center",
             textTransform: "uppercase",
-            textShadow: "0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)",
+
           }}
         >
-          <span className="relative" style={{ color: "#fcde6e" }}>
-            BỐI CẢNH&nbsp;
-            <span className="absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow"></span>
-          </span>
-          <span className="relative">
-            LỊCH SỬ
-            <span className="absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black"></span>
-          </span>
+          <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
+            <span className="text-[#12296c] relative">
+              BỐI CẢNH&nbsp;
+              <span className="absolute -bottom-1 right-[2px] 3xl:-right-[1px] h-[2.5px] w-full bg-[#fdd142]"></span>
+            </span>
+            <span className="relative text-[#12296c]">
+              LỊCH SỬ
+              <span className="absolute -bottom-1 -left-[2px] 3xl:-left-[1px] h-[2.5px] w-full bg-[#fdd142]"></span>
+            </span>
+          </h1>
         </h2>
         <div className="context-content">
           <div
@@ -147,7 +149,7 @@ export default function Context1() {
       </section>
     );
   else return (
-    <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative">
+    <section id="context" className="h-[100vh] pt-[28px] bg-[#fef6d9] relative">
       <h2
         className="context-title w-full text-center"
         style={{
@@ -156,17 +158,18 @@ export default function Context1() {
           lineHeight: 1.4,
           textAlign: "center",
           textTransform: "uppercase",
-          textShadow: "0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)",
         }}
       >
-        <span className="relative" style={{ color: "#fcde6e" }}>
-          歴史的&nbsp;
-          <span className="absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow"></span>
-        </span>
-        <span className="relative">
-          背景
-          <span className="absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black"></span>
-        </span>
+        <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
+          <span className="text-[#12296c] relative">
+            歴史的
+            <span className="absolute -bottom-1 right-[2px] 3xl:-right-[1px] h-[2.5px] w-full bg-[#fdd142]"></span>
+          </span>
+          <span className="relative text-[#12296c]">
+            背景
+            <span className="absolute -bottom-1 -left-[2px] 3xl:-left-[1px] h-[2.5px] w-full bg-[#fdd142]"></span>
+          </span>
+        </h1>
       </h2>
       <div className="context-content">
         <div

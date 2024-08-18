@@ -41,27 +41,7 @@ export default function Context2() {
   const isVietnamese = language == "vi";
   if (isVietnamese)
     return (
-      <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative">
-        <h2
-          className="context-title w-full text-center"
-          style={{
-            fontSize: "28px",
-            fontWeight: 700,
-            lineHeight: 1.4,
-            textAlign: "center",
-            textTransform: "uppercase",
-            textShadow: "0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)",
-          }}
-        >
-          <span className="relative" style={{ color: "#fcde6e" }}>
-            BỐI CẢNH&nbsp;
-            <span className="absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow"></span>
-          </span>
-          <span className="relative">
-            LỊCH SỬ
-            <span className="absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black"></span>
-          </span>
-        </h2>
+      <section id="context" className="h-[100vh] pt-[28px] bg-[#fef6d9] relative">
         <div className="context-content">
           <div
             className="left-side"
@@ -93,7 +73,7 @@ export default function Context2() {
             <section className="space-y-9 bg-yellow-50 font-sans mt-4 pr-8">
               <div
                 className="bg-yellow-500 text-black p-6 rounded-md shadow-md"
-                style={{ backgroundColor: 'rgba(252, 222, 110, 0.6)' }}
+                style={{ backgroundColor: 'rgba(252, 222, 110, 1)' }}
               >
                 <h2 className="text-lg font-bold mb-4">
                   TẬP TRUNG BINH LỰC, &quot;QUẢ ĐẤM THÉP&quot; QUYẾT CHIẾN VỚI VIỆT MINH
@@ -109,7 +89,7 @@ export default function Context2() {
 
               <div
                 className="bg-yellow-300 text-black p-6 rounded-md shadow-md"
-                style={{ backgroundColor: 'rgba(252, 222, 110, 0.6)' }}
+                style={{ backgroundColor: 'rgba(252, 222, 110, 1)' }}
               >
                 <h2 className="text-lg font-bold mb-4">
                   MƯU TOAN TRONG VÒNG 18 THÁNG
@@ -124,7 +104,7 @@ export default function Context2() {
 
               <div
                 className="bg-yellow-500 text-black p-6 rounded-md shadow-md"
-                style={{ backgroundColor: 'rgba(252, 222, 110, 0.6)' }}
+                style={{ backgroundColor: 'rgba(252, 222, 110, 1)' }}
               >
                 <h2 className="text-lg font-bold mb-4">
                   LÀ NỖ LỰC CUỐI CÙNG CỦA THỰC DÂN PHÁP VÀ CAN THIỆP MỸ
@@ -141,27 +121,7 @@ export default function Context2() {
     );
 
   return (
-    <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative">
-      <h2
-        className="context-title w-full text-center"
-        style={{
-          fontSize: "28px",
-          fontWeight: 700,
-          lineHeight: 1.4,
-          textAlign: "center",
-          textTransform: "uppercase",
-          textShadow: "0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)",
-        }}
-      >
-        <span className="relative" style={{ color: "#fcde6e" }}>
-          歴史的&nbsp;
-          <span className="absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow"></span>
-        </span>
-        <span className="relative">
-          背景
-          <span className="absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black"></span>
-        </span>
-      </h2>
+    <section id="context" className="h-[100vh] pt-[28px] bg-[#fef6d9] relative">
       <div className="context-content">
         <div
           className="left-side"

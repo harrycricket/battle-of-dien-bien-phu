@@ -53,18 +53,18 @@ export default function BattleContext1() {
           lineHeight: 1.4,
           textAlign: 'center',
           textTransform: 'uppercase',
-          textShadow:
-            '0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)',
         }}
       >
-        <span className='relative' style={{ color: '#fcde6e' }}>
-          CÁC ĐỢT&nbsp;
-          <span className='absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow'></span>
-        </span>
-        <span className='relative'>
-          TẤN CÔNG
-          <span className='absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black'></span>
-        </span>
+        <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
+          <span className="text-[#12296c] relative">
+            CÁC ĐỢT&nbsp;
+            <span className="absolute -bottom-1 right-[2px] 3xl:-right-[1px] h-[2.5px] w-full bg-yellow"></span>
+          </span>
+          <span className="relative text-[#12296c]">
+            TẤN CÔNG
+            <span className="absolute -bottom-1 -left-[2px] 3xl:-left-[1px] h-[2.5px] w-full bg-yellow"></span>
+          </span>
+        </h1>
       </h2>
       <div className='context-content' ref={leftSideRef}>
         <div

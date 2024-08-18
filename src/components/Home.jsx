@@ -131,10 +131,11 @@ const Home = () => {
   }, []);
 
 
-  const text1 = language === "vi" ? 'CHIẾN DỊCH' : "作戦";
-  const text2 = language === "vi" ? 'ĐIỆN BIÊN PHỦ' : "DIEN BIEN PHU";
-  const text3 = language === "vi" ? 'CHIẾN DỊCH ĐIỆN BIÊN PHỦ' : "DIEN BIEN PHU作戦";
-  const paragraphText = language === "vi" ? `Chiến thắng Điện Biên Phủ năm 1954 là một mốc son chói lọi trong lịch sử dân tộc, đánh dấu chấm dứt hoàn toàn ách thống trị của thực dân Pháp trên đất nước ta. Dưới sự lãnh đạo của Đại tướng Võ Nguyên giáp đã tạo ra cuộc chiến "lừng lẫy năm châu, chấn động địa cầu" buộc Pháp phải ký Hiệp định Geneva. Đây là một chiến thắng vĩ đại không chỉ của quân đội nhân dân Việt Nam mà còn là của toàn dân tộc, mở ra một thời kỳ mới cho đất nước.` : `1954年のDien Bien Phuの勝利は、我が国の歴史における輝かしい節目であり、フランス植民地支配の完全な終焉を意味します。ヴォ・グエン・ジャップ大将の指導の下で、「世界に轟く、地球を揺るがす戦い」を繰り広げ、フランスにジュネーブ協定に署名させました。これはベトナム人民軍だけでなく、全民族の偉大な勝利であり、国に新たな時代を切り開くものでした。`;
+  const text1 = language === "vi" ? 'CHIẾN DỊCH' : "の戦い";
+  const text2 = language === "vi" ? 'ĐIỆN BIÊN PHỦ' : "ディエンビエンフー";
+  const text3 = language === "vi" ? 'CHIẾN DỊCH ĐIỆN BIÊN PHỦ' : " ディエンビエンフーの戦い";
+  const paragraphText = language === "vi" ? `Chiến thắng Điện Biên Phủ năm 1954 là một mốc son chói lọi trong lịch sử dân tộc, đánh dấu chấm dứt hoàn toàn ách thống trị của thực dân Pháp trên đất nước ta. Dưới sự lãnh đạo của Đại tướng Võ Nguyên giáp đã tạo ra cuộc chiến "lừng lẫy năm châu, chấn động địa cầu" buộc Pháp phải ký Hiệp định Geneva. Đây là một chiến thắng vĩ đại không chỉ của quân đội nhân dân Việt Nam mà còn là của toàn dân tộc, mở ra một thời kỳ mới cho đất nước.` : `ディエンビエンフーの勝利（1954年）は、我が民族の歴史における輝かしい金字塔であり、フランス植民地支配を完全に終わらせた重要な節目でした。ヴォー・グエン・ザップ大将の指導の下で、「五大陸に轟き、地球を揺るがす」戦いを成し遂げ、フランスにジュネーブ協定への署名を余儀なくさせました。この勝利は、ベトナム人民軍だけでなく、全民族の偉大な勝利であり、国に新たな時代を開きました。`;
+  const year = language === "vi" ? "1954" : "1954年";
 
   return (
     <section
@@ -165,7 +166,7 @@ const Home = () => {
 
       <div className='absolute top-[5vh] right-[10vw]' ref={newTextRef}>
         <h1 className="font-semibold mb-6">
-          <span className="text-black text-base 3xl:text-2xl ps-1 font-extrabold vertical-text relative">
+          <span className={`text-black text-base 3xl:text-2xl ps-1 font-extrabold ${language === "vi" ? "vertical-text" : "vertical-text-jp"} relative`}>
             {text2.split('').map((char, index) => (
               <span key={index} className="char text-black">{char}</span>
             ))}
@@ -227,13 +228,13 @@ const Home = () => {
               className="text-3xl font-extrabold"
               ref={(el) => (additionalTextRefs.current[1] = el)}
             >
-              13/3/1954
+              {language === "vi" ? "13/3/1954" : "1954年3月13日"}
             </div>
             <div
               className="text-5xl font-extrabold leading-[50px]"
               ref={(el) => (additionalTextRefs.current[2] = el)}
             >
-              7/5/1954
+              {language === "vi" ? "7/5/1954" : "1954年5月7日"}
             </div>
           </div>
         </div>

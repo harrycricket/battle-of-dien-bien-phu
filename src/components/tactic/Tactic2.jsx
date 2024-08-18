@@ -44,33 +44,12 @@ export default function Tactic2() {
     <section
       id='tactic'
       className='h-[100vh] pt-[28px] bg-primaryBgColor relative'
-    >
-      <h2
-        className='context-title w-full text-center'
-        style={{
-          fontSize: '28px',
-          fontWeight: 700,
-          lineHeight: 1.4,
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          textShadow:
-            '0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)',
-        }}
-      >
-        <span className='relative' style={{ color: '#fcde6e' }}>
-          Phương châm&nbsp;
-          <span className='absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow'></span>
-        </span>
-        <span className='relative'>
-          tác chiến
-          <span className='absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black'></span>
-        </span>
-      </h2>
+    >      
       <div className='context-content' ref={leftSideRef}>
         <div
           className='left-side min-w-full'
           style={{
-            backgroundImage: `url('/images/battle/keophao.jpg')`,
+            backgroundImage: `url('/images/battle/bg.jpg')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'left',
@@ -90,7 +69,7 @@ export default function Tactic2() {
               </span>
               <br />
               <br />
-              <ul className='list-disc pl-10 space-y-2 italic'>
+              <ul className='list-disc pl-10 space-y-2 italic font-normal'>
                 <li className=''>
                   Bác Hồ đã dặn: "Trận này chỉ được thắng không được thua vì
                   thua là hết vốn"

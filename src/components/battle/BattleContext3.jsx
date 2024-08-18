@@ -44,28 +44,7 @@ export default function BattleContext3() {
     <section
       id='battle'
       className='h-[100vh] pt-[28px] bg-primaryBgColor relative'
-    >
-      <h2
-        className='context-title w-full text-center'
-        style={{
-          fontSize: '28px',
-          fontWeight: 700,
-          lineHeight: 1.4,
-          textAlign: 'center',
-          textTransform: 'uppercase',
-          textShadow:
-            '0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)',
-        }}
-      >
-        <span className='relative' style={{ color: '#fcde6e' }}>
-          CÁC ĐỢT&nbsp;
-          <span className='absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow'></span>
-        </span>
-        <span className='relative'>
-          TẤN CÔNG
-          <span className='absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black'></span>
-        </span>
-      </h2>
+    >      
       <div className='context-content' ref={leftSideRef}>
         <div
           className='left-side min-w-full'
