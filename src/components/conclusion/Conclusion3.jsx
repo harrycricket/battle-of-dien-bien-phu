@@ -58,7 +58,7 @@ const Conclusion3 = () => {
       </div>
 
       <div className='w-full h-full flex items-center justify-center px-4 animated-text'>
-    <div className='text-center font-bold max-w-6xl bg-rgbaBgColor bg-opacity-70 p-6 m-2 rounded-md'>
+    <div className='text-center font-bold max-w-6xl bg-yellow bg-opacity-70 p-6 m-2 rounded-md'>
         {isVietNamase ? (
         <>
             <h1 className='text-4xl md:text-8xl lg:text-9xl mb-6 text-black font-extrabold text-shadow-cus'>
