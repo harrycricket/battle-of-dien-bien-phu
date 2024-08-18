@@ -3,6 +3,7 @@ import Conclusion1 from './conclusion/Conclusion1';
 import SwiperSection from './SwiperSection';
 import { SwiperSlide } from 'swiper/react';
 import Conclusion2 from './conclusion/Conclusion2';
+import Conclusion3 from './conclusion/Conclusion3';
 
 export const Conclusion = () => {
   return (
@@ -13,6 +14,9 @@ export const Conclusion = () => {
         </SwiperSlide>
         <SwiperSlide>
           <Conclusion2/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Conclusion3/>
         </SwiperSlide>
       </SwiperSection>
     </div>

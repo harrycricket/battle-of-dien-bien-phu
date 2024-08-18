@@ -105,3 +105,7 @@ a {
   cursor: pointer;
   user-select: none;
 }
+
+.text-shadow-cus {
+  text-shadow: 0.04419417em 0.04419417em 0.01125em rgba(255, 255, 255, 0.99);
+}
