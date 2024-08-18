@@ -10,7 +10,7 @@ export const sessions = [
   "hero",
 ];
 
-const initialIsBeginning = [true, true, true, true, true, true];
+const initialIsBeginning = [true, true, true, true, true, true, true];
 const initialIsEnd = [true, true, true, true, true, true, true];
 
 const getIndexOfSession = (session) => {

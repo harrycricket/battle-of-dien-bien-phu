@@ -160,11 +160,11 @@ export default function Context1() {
         }}
       >
         <span className="relative" style={{ color: "#fcde6e" }}>
-          背景&nbsp;
+          歴史的&nbsp;
           <span className="absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow"></span>
         </span>
         <span className="relative">
-          歴史
+          背景
           <span className="absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black"></span>
         </span>
       </h2>
