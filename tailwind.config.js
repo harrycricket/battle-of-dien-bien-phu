@@ -38,8 +38,6 @@ export default {
       screens: {
         '3xl': '1700px',
       },
-    },
-    extend: {
       fontSize: {
         'xxs': '28px', // Custom text size (10px)
       }

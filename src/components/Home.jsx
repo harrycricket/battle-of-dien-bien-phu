@@ -131,16 +131,10 @@ const Home = () => {
   }, []);
 
 
-  const text1 = 'CHIẾN DỊCH';
-  const text2 = 'ĐIỆN BIÊN PHỦ';
-  const text3 = 'CHIẾN DỊCH ĐIỆN BIÊN PHỦ';
-  const paragraphText = language === "vi" ? `Đây là chiến thắng quân sự lớn nhất trong cuộc Chiến tranh Đông Dương (1945 – 1954) của Việt Nam.
-  Với thắng lợi quyết định này, lực lượng Quân đội Nhân dân Việt Nam do Đại tướng Võ Nguyên Giáp chỉ huy
-  đã buộc quân Pháp và chính quyền Quốc Gia Việt Nam tại Điện Biên Phủ phải đầu hàng vào ngày 7 tháng 5 năm
-  1954, sau suốt 2 tháng cầm cự.` : `これは、インドシナ戦争 (1945 ～ 1954 年) におけるベトナムにとって最大の軍事勝利でした。
- この決定的な勝利により、ベトナム人民軍はボー・グエン・ザップ将軍によって指揮された。
- 2019年5月7日、ディエンビエンフーのフランス軍とベトナム国民政府を降伏させた。
- 2か月の持ちこたえの後の1954年。`;
+  const text1 = language === "vi" ? 'CHIẾN DỊCH' : "作戦";
+  const text2 = language === "vi" ? 'ĐIỆN BIÊN PHỦ' : "DIEN BIEN PHU";
+  const text3 = language === "vi" ? 'CHIẾN DỊCH ĐIỆN BIÊN PHỦ' : "DIEN BIEN PHU作戦";
+  const paragraphText = language === "vi" ? `Chiến thắng Điện Biên Phủ năm 1954 là một mốc son chói lọi trong lịch sử dân tộc, đánh dấu chấm dứt hoàn toàn ách thống trị của thực dân Pháp trên đất nước ta. Dưới sự lãnh đạo của Đại tướng Võ Nguyên giáp đã tạo ra cuộc chiến "lừng lẫy năm châu, chấn động địa cầu" buộc Pháp phải ký Hiệp định Geneva. Đây là một chiến thắng vĩ đại không chỉ của quân đội nhân dân Việt Nam mà còn là của toàn dân tộc, mở ra một thời kỳ mới cho đất nước.` : `1954年のDien Bien Phuの勝利は、我が国の歴史における輝かしい節目であり、フランス植民地支配の完全な終焉を意味します。ヴォ・グエン・ジャップ大将の指導の下で、「世界に轟く、地球を揺るがす戦い」を繰り広げ、フランスにジュネーブ協定に署名させました。これはベトナム人民軍だけでなく、全民族の偉大な勝利であり、国に新たな時代を切り開くものでした。`;
 
   return (
     <section
@@ -156,22 +150,23 @@ const Home = () => {
     >
       <div className="absolute top-0 left-0 bg-black opacity-50 w-[50vw] h-[100vh]" />
       <div className='absolute top-2 left-[50.75%] 3xl:left-[51.2%] transform -translate-x-1/2'>
-        <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
-          <span className="text-white relative">
-            CHIẾN DỊCH&nbsp;
-            <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-yellow"></span>
-          </span>
-          <span className="text-black relative">
-            ĐIỆN BIÊN PHỦ
-            <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
-          </span>
-        </h1>
+        {language === "vi" &&
+          <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
+            <span className="text-white relative">
+              CHIẾN DỊCH&nbsp;
+              <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-yellow"></span>
+            </span>
+            <span className="text-black relative">
+              ĐIỆN BIÊN PHỦ
+              <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
+            </span>
+          </h1>}
       </div>
 
       <div className='absolute top-[5vh] right-[10vw]' ref={newTextRef}>
         <h1 className="font-semibold mb-6">
           <span className="text-black text-base 3xl:text-2xl ps-1 font-extrabold vertical-text relative">
-            {`ĐIỆN BIÊN PHỦ`.split('').map((char, index) => (
+            {text2.split('').map((char, index) => (
               <span key={index} className="char text-black">{char}</span>
             ))}
           </span>
@@ -193,7 +188,7 @@ const Home = () => {
       </div>
 
       <div className='absolute top-[31vh] left-[19vw] 3xl:left-[16vw] z-10' ref={textRef}>
-        <h1 className="text-white text-[55px] 3xl:text-[80px] font-extrabold mb-6">
+        {language === "vi" ? <h1 className="text-white text-[55px] 3xl:text-[80px] font-extrabold mb-6">
           {text1.split('').map((char, index) => (
             <span key={index} className="char">
               {char}
@@ -205,7 +200,20 @@ const Home = () => {
               {char}
             </span>
           ))}
-        </h1>
+        </h1> : <h1 className="text-white text-[55px] 3xl:text-[80px] font-extrabold mb-6">
+          {text2.split('').map((char, index) => (
+            <span key={index} className="char">
+              {char}
+            </span>
+          ))}
+          <br />
+          {text1.split('').map((char, index) => (
+            <span key={index} className="char">
+              {char}
+            </span>
+          ))}
+        </h1>}
+
       </div>
 
       <div className="flex flex-col md:flex-row items-end justify-center w-full ms-[90px]">
@@ -214,7 +222,7 @@ const Home = () => {
             className='ms-10'
             ref={(el) => (additionalTextRefs.current[0] = el)}
           >
-            <div className="text-2xl font-extrabold">ĐIỆN BIÊN PHỦ</div>
+            <div className="text-2xl font-extrabold">{text2}</div>
             <div
               className="text-3xl font-extrabold"
               ref={(el) => (additionalTextRefs.current[1] = el)}
@@ -239,8 +247,8 @@ const Home = () => {
             />
           </div>
         </div>
-        <div className="flex-1 text-black bg-yellow p-6 pt-12 rounded-lg shadow-lg">
-          <div className="absolute bottom-44 3xl:bottom-52 right-0 flex w-auto justify-end gap-4">
+        <div className="flex-1 text-black bg-yellow pl-6 pr-6 pb-3 pt-12 rounded-lg shadow-lg">
+          <div className={`absolute ${language === "vi" ? "bottom-44" : "bottom-[190px] 3xl:bottom-48"} 3xl:bottom-52 right-0 flex w-auto justify-end gap-4`}>
             <div className="w-[230px] h-[130px] 3xl:w-[270px] 3xl:h-[150px] overflow-hidden rounded-md">
               <ReactPlayer
                 url="70Y-DienBienPhu.mp4"
