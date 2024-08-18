@@ -30,6 +30,13 @@ html {
     transform: rotate(180deg);
     text-orientation: mixed;
   }
+
+  .vertical-text-jp {
+    writing-mode: vertical-rl;
+    transform: rotate(0deg);
+    text-orientation: mixed;
+  }
+
   .colorful-text {
     font-size: 24px;
     background: linear-gradient(to right, #084e9c, #f27123, #51b748);
@@ -97,4 +104,8 @@ html {
 a {
   cursor: pointer;
   user-select: none;
+}
+
+.text-shadow-cus {
+  text-shadow: 0.04419417em 0.04419417em 0.01125em rgba(255, 255, 255, 0.99);
 }

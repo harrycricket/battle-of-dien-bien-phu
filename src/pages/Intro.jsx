@@ -1,18 +1,21 @@
 import { useEffect } from "react";
 import { preLoaderAnim } from "../animations/animation";
+import useIntroLoadingState from "../hooks/useIntroLoadingState";
 
 const Intro = () => {
+    const { setIsIntroLoading } = useIntroLoadingState();
     useEffect(() => {
-        document.body.style.overflow = 'hidden';
-
+        document.body.style.overflow = 'hidden !important';
         preLoaderAnim(() => {
             document.body.style.overflow = '';
+            setIsIntroLoading(false);
+            // console.log("loaded...", isIntroLoading);
         });
     }, []);
 
     return (
         <div
-            className="preloader fixed inset-0 z-[1000] flex flex-col items-center justify-center text-white bg-PrimaryBgTien"
+            className="select-none preloader fixed inset-0 z-[1000] flex flex-col items-center justify-center text-white bg-PrimaryBgTien"
         >
             <div
                 className="absolute inset-0 opacity-70"

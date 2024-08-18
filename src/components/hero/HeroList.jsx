@@ -204,7 +204,7 @@ export default function HeroList() {
   const isVietnamese = language == "vi";
   return (
     <section
-      id="hero-list"
+      id="hero"
       className=" bg-primaryBgColor h-[100vh] w-screen overflow-hidden flex flex-col justify-center"
     >
       {/* Những anh hùng tiêu biểu */}

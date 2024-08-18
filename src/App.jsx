@@ -1,6 +1,7 @@
 import { NextUIProvider } from '@nextui-org/react';
 import Context from './components/Context';
 import Battle from './components/Battle';
+import Tactic from './components/Tactic';
 import Conclusion from './components/Conclusion';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -12,20 +13,23 @@ import { useEffect } from 'react';
 import useSessionTransitionState from './hooks/useSessionTransitionState';
 import HeroList from './components/hero/HeroList';
 import Heroes from './components/Heroes';
+import useIntroLoadingState from './hooks/useIntroLoadingState';
 
 function App() {
+  const { isIntroLoading } = useIntroLoadingState();
   const { index, sliding, transiting, getIsBeginning, getIsEnd, onNextSession, onPrevSession } = useSessionTransitionState();
   const handleWheel = (event) => {
     event.preventDefault();
+    // console.log("Wheeling...", isIntroLoading);
     // console.log(`getIsBeginning(${index}): `, getIsBeginning(index));
     // console.log(`getIsEnd(${index}): `, getIsEnd(index));
     // console.log(`transiting: ${transiting} - sliding: ${transiting}`);
     // console.log("Enable to prev: ", (!transiting && !sliding && event.deltaY < 0 && getIsBeginning(index)));
     // console.log("Enable to next: ", !transiting && !sliding && event.deltaY > 0 && getIsEnd(index));
-    if (!transiting && !sliding && event.deltaY < 0 && getIsBeginning(index)) {
+    if (!isIntroLoading && !transiting && !sliding && event.deltaY < 0 && getIsBeginning(index)) {
       onPrevSession();
     }
-    if (!transiting && !sliding && event.deltaY > 0 && getIsEnd(index)) {
+    if (!isIntroLoading && !transiting && !sliding && event.deltaY > 0 && getIsEnd(index)) {
       onNextSession();
     }
 
@@ -37,7 +41,7 @@ function App() {
     return () => {
       document.removeEventListener('wheel', handleWheel);
     };
-  }, [index, transiting, sliding]);
+  }, [index, transiting, sliding, isIntroLoading]);
 
   return (
     <>
@@ -49,8 +53,9 @@ function App() {
         <Context />
         <Battle />
         <Victory />
+        <Tactic />
         <Conclusion />
-        <Heroes />
+        <HeroList />
         {/* <Footer /> */}
       </NextUIProvider>
     </>

@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 
-export default function BattleContext1() {
+export default function BattleContext3() {
   const leftSideRef = useRef(null);
   const rightSideRef = useRef(null);
 
@@ -71,20 +71,20 @@ export default function BattleContext1() {
           className='left-side min-w-full'
           ref={leftSideRef}
           style={{
-            backgroundImage: `url('/images/battle/dot1.jpg')`,
+            backgroundImage: `url('/images/battle/dot3.jpg')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'left',
           }}
         >
-          <div className='context-content-title top-28 h-28' ref={leftSideRef}>
+          <div className='context-content-title top-28 h-28 rounded-lg' ref={leftSideRef}>
             <span
               className='uppercase'
               style={{
                 fontSize: '28px',
               }}
             >
-              Đợt tấn công đầu tiên
+              Đợt tấn công thứ ba
             </span>
             <br />
             <span
@@ -94,14 +94,17 @@ export default function BattleContext1() {
                 marginTop: '4px',
               }}
             >
-              13/03/1954 - 17/03/1954
+              01/05/1954 đến 07/05/1954
             </span>
           </div>
 
           <div
             ref={leftSideRef}
-            className='context-content-title top-80 h-64 max-w-96'
-            style={{ backgroundColor: 'rgba(255, 255, 255, 0.7)', borderRadius: 6 }}
+            className='context-content-title top-80 h-48 max-w-96 backdrop-blur-sm'
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.7)',
+              borderRadius: 6,
+            }}
           >
             <span
               className='uppercase'
@@ -113,62 +116,73 @@ export default function BattleContext1() {
             </span>
             <br />
             <br />
-            <ul className='list-disc pl-6 space-y-2 italic font-normal'>
-              <li>Triệt hạ cứ điểm Him Lam, Bản Kéo, đồi Độc Lập</li>
-              <li>
-                Phá vỡ cửa ngõ phía Bắc của Tập đoàn cứ điểm Điện Biên Phủ
-              </li>
-              <li>
-                Tiêu diệt và bắt sống trên 2.000 tên địch, phá hủy 25 máy bay,
-                xóa sổ 1 trung đoàn, uy hiếp sân bay Mường Thanh
-              </li>
-              <li>
-                Charles Piroth bất lực trước pháo binh của ta đã dùng lựu đạn tự
-                sát
-              </li>
+            <ul className='list-disc pl-6 space-y-2 font-normal'>
+              <li>Chiếm được toàn bộ khu vực Điện Biên Phủ</li>
+              <li>Đập đổ kế hoạch Navarre</li>
+              <li>Bắt sống De Castries và toàn bộ quân Pháp chạy trốn</li>
             </ul>
           </div>
         </div>
 
         <div className='absolute pt-[100px] pl-[750px]' ref={rightSideRef}>
-          <section className='space-y-9 bg-yellow-50 font-sans mt-4 pr-8'>
-            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor'>
-              <h2 className='text-lg font-bold'>13-03-1954</h2>
+          <section className='space-y-9 bg-yellow-50 font-sans pr-8'>
+            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm'>
+              <h2 className='text-lg font-bold'>01/05/1954</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
-                  Đúng 8 giờ sáng, Bộ đội ta bắn cháy hai chiếc máy bay Dakota của
-                  quân Pháp tại sân bay Mường Thanh
-                </li>
-                <li>
-                  17 giờ 5 phút, quân ta đồng loạt tấn công các cứ điểm Him Lam
+                  17 giờ chiều, quân ta tấn công vào cứ điểm Hồng Cúm, làm tê
+                  liệt cụm pháo địch
                 </li>
               </ul>
               <br />
-              <h2 className='text-lg font-bold'>14-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>7 giờ 30 phút, quân Pháp phản công ở Him Lam bất thành</li>
-                <li>16 giờ 45 phút, quân ta nổ súng đánh đồi Độc Lập</li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>15-03-1954</h2>
+              <h2 className='text-lg font-bold'>02/05/1954</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
-                  6 giờ 30 phút, lá cờ <strong>Quyết chiến quyết thắng</strong>{' '}
-                  được cắm trên đồi Độc Lập
-                </li>
-                <li>
-                  12 giờ 45 phút, trung tá Charles Piroth (Jean Charles Clément
-                  Piroth) tự sát
-                </li>
-                <li>
-                  Quân Pháp tổ chức phản công tái chiếm đồi Độc Lập nhưng đều bị
-                  đánh lui
+                  2 giờ sáng, Trung đoàn 209 tiêu diệt trung tâm đề kháng
+                  Dominique
                 </li>
               </ul>
               <br />
-              <h2 className='text-lg font-bold'>17-03-1954</h2>
+              <h2 className='text-lg font-bold'>03/05/1954</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>Quân Pháp ở Bản Kéo sợ hãi bỏ chạy</li>
+                <li>4 cứ điểm: C1, 505, 505A ở phía Đông và 311A ở phía Tây</li>
+              </ul>
+              <br />
+              <h2 className='text-lg font-bold'>04/05/1954</h2>
+              <ul className='list-disc pl-10 space-y-2 italic'>
+                <li>
+                  Tiêu diệt 311A, Đại đoàn 308 tiếp tục đánh 311B (Huguette 4)
+                </li>
+              </ul>
+              <br />
+              <h2 className='text-lg font-bold'>05/05/1954</h2>
+              <ul className='list-disc pl-10 space-y-2 italic'>
+                <li>
+                  Trung đoàn 174 đặt gần 1 tấn bộc phá trong đường hầm đồi A1
+                </li>
+              </ul>
+              <br />
+              <h2 className='text-lg font-bold'>06/05/1954</h2>
+              <ul className='list-disc pl-10 space-y-2 italic'>
+                <li>
+                  Ta tấn công vào đồi A1, C2, cứ điểm 506, Bắc Mường Thanh, cứ
+                  điểm 310, Tây Mường Thanh
+                </li>
+                <li>
+                  Tiêu diệt 506 (Eliane 10), chiếm cứ điểm 311 (Hugaette F)
+                </li>
+              </ul>
+              <br />
+              <h2 className='text-lg font-bold'>07/05/1954</h2>
+              <ul className='list-disc pl-10 space-y-2 italic'>
+                <li>
+                  17 giờ 30 phút, bắt sống De Castries và toàn bộ cơ quan tham
+                  mưu của hắn
+                </li>
+                <li>
+                  Quân ta tiếp tục truy kích tới 24 giờ, bắt sống được toàn bộ
+                  quân địch
+                </li>
               </ul>
             </div>
           </section>

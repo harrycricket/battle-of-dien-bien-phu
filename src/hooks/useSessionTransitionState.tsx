@@ -5,13 +5,13 @@ export const sessions = [
   "context",
   "battle",
   "victory",
-  // "tactic",
-  "hero-list",
-  "summary"
+  "tactic",
+  "summary",
+  "hero",
 ];
 
 const initialIsBeginning = [true, true, true, true, true, true];
-const initialIsEnd = [true, true, true, true, true, true];
+const initialIsEnd = [true, true, true, true, true, true, true];
 
 const getIndexOfSession = (session) => {
   return sessions.findIndex((s) => s === session);

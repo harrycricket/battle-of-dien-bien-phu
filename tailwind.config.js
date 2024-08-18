@@ -8,7 +8,7 @@ export default {
       secondaryTextColor: '#171914',
       primaryBgColor: '#EADDBD',
       secondBgColor: '#EBE0C0',
-      rgbaBgColor: 'rgba(255, 255, 255, 0.7)',
+      rgbaBgColor: '#fcde6e',
       buttonTextColor: '#0a0a0a',
       white: '#FFFFFF',
       black: '#242424',
@@ -41,8 +41,6 @@ export default {
       screens: {
         '3xl': '1700px',
       },
-    },
-    extend: {
       fontSize: {
         'xxs': '28px', // Custom text size (10px)
       }
