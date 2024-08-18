@@ -1,4 +1,4 @@
-main{
+.victory-main{
     position: relative;
     background-color: #fcde6e;
     height: 100vh;
@@ -6,9 +6,12 @@ main{
 }
 
 .bg-img {
-    position: absolute; 
+    /* position: absolute; 
     width: 194.67%;
-    top: 35%;
+    top: 65%;
+    left: 50%; */
+    position: absolute;
+    top: 49%;
     left: 50%;
     z-index: 1;
 }
@@ -39,7 +42,7 @@ main{
 .front {
     position: absolute;
     width: 194.44%;
-    top: 93%;
+    top: 90%;
     left: 50%;
     z-index: 3;
 }
@@ -60,7 +63,7 @@ main{
 }
 
 @media (max-width: 575.98px) {
-    main{
+    .victory-main{
         background-color: white;
     }
 
@@ -78,7 +81,7 @@ main{
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-    main{
+    .victory-main{
         background-color: white;
     }
     .left-man{
@@ -95,13 +98,13 @@ main{
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-    main{
+    .victory-main{
         background-color: white;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    main{
+    .victory-main{
         background-color: white;
     }
 
