@@ -78,8 +78,11 @@ export default function Tactic1() {
           }}
         />
 
-        <div className='absolute flex flex-row pt-32 pl-28 pr-12 gap-8' ref={rightSideRef}>
-          <section className='space-y-9 bg-yellow-50 font-sans mt-4 pr-8'>
+        <div
+          className='absolute flex flex-row pt-32 pl-28 pr-12 gap-12'
+          ref={rightSideRef}
+        >
+          <section className='space-y-9 bg-yellow-50 font-sans'>
             <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm'>
               <span
                 style={{
@@ -91,45 +94,46 @@ export default function Tactic1() {
               </span>
               <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
+                  Khi tất cả pháo bắn đã sẵn sàng, ngay khi có lệnh, lập tức
+                  chạy nhanh, tiến thẳng đến cơ quan đầu não
+                </li>
+                <li>
                   Ngày 14/1/1954, Võ Nguyên Giáp và Bộ Chỉ huy chiến dịch đã lên
                   phương án “đánh nhanh, thắng nhanh” và dự định nổ súng vào
                   ngày 20/1 nhằm tiêu diệt Điện Biên Phủ trong hai ngày ba đêm
                 </li>
+              </ul>
+              <br />
+              <h2 className='text-lg font-bold'>Lợi thế</h2>
+              <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
-                  17 giờ 5 phút, quân ta đồng loạt tấn công các cứ điểm Him Lam
+                  Tạo yếu tố bất ngờ, khiến Pháp không kịp phản ứng và tổ chức
+                  phòng thủ hiệu quả. Đánh úp ngay khi còn chưa “ổn định được
+                  chỗ ngồi”
+                </li>
+                <li>
+                  Cuộc chiến không bị kéo dài, quân ta sẽ không bị kiệt sức,
+                  công tác hậu cầu, tiếp tế lương thực, đạn dược cũng sẽ được
+                  đảm bảo
                 </li>
               </ul>
               <br />
-              <h2 className='text-lg font-bold'>14-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>7 giờ 30 phút, quân Pháp phản công ở Him Lam bất thành</li>
-                <li>16 giờ 45 phút, quân ta nổ súng đánh đồi Độc Lập</li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>15-03-1954</h2>
+              <h2 className='text-lg font-bold'>Hạn chế</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
-                  6 giờ 30 phút, lá cờ <strong>Quyết chiến quyết thắng</strong>{' '}
-                  được cắm trên đồi Độc Lập
+                  Trước nay bộ đội ta chỉ quen tác chiến vào ban đêm, tác chiến
+                  ở những địa hình dễ ẩn náu.
                 </li>
                 <li>
-                  12 giờ 45 phút, trung tá Charles Piroth (Jean Charles Clément
-                  Piroth) tự sát
+                  Bộ đội ta không có xe tăng, không có máy bay, lại thêm chưa có
+                  kinh nghiệm tác chiến hiệp đồng bộ binh và pháo binh quy mô
+                  lớn.
                 </li>
-                <li>
-                  Quân Pháp tổ chức phản công tái chiếm đồi Độc Lập nhưng đều bị
-                  đánh lui
-                </li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>17-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>Quân Pháp ở Bản Kéo sợ hãi bỏ chạy</li>
               </ul>
             </div>
           </section>
 
-          <section className='space-y-9 bg-yellow-50 font-sans mt-4 pr-8'>
+          <section className='space-y-9 bg-yellow-50 font-sans mt-24'>
             <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm'>
               <span
                 style={{
@@ -141,40 +145,18 @@ export default function Tactic1() {
               </span>
               <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
-                  Ngày 14/1/1954, Võ Nguyên Giáp và Bộ Chỉ huy chiến dịch đã lên
-                  phương án “đánh nhanh, thắng nhanh” và dự định nổ súng vào
-                  ngày 20/1 nhằm tiêu diệt Điện Biên Phủ trong hai ngày ba đêm
+                  Bao vây cứ điểm của địch, dùng hệ thống hầm hào như một chiếc
+                  khiên bảo vệ bộ đội trước đạn pháo của kẻ thù, từng bước tiến
+                  vào lòng địch
                 </li>
                 <li>
-                  17 giờ 5 phút, quân ta đồng loạt tấn công các cứ điểm Him Lam
-                </li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>14-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>7 giờ 30 phút, quân Pháp phản công ở Him Lam bất thành</li>
-                <li>16 giờ 45 phút, quân ta nổ súng đánh đồi Độc Lập</li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>15-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>
-                  6 giờ 30 phút, lá cờ <strong>Quyết chiến quyết thắng</strong>{' '}
-                  được cắm trên đồi Độc Lập
+                  Tiến công từng vị trí một, vây chặt địch, cắt tiếp tế của
+                  địch, buộc địch rơi vào tình thế khó khăn
                 </li>
                 <li>
-                  12 giờ 45 phút, trung tá Charles Piroth (Jean Charles Clément
-                  Piroth) tự sát
+                  Trong đêm ngày 25/1, Đại tướng Võ Nguyên Giáp đã đổi phương
+                  châm tác chiến thành “đánh chắc, tiến chắc”.
                 </li>
-                <li>
-                  Quân Pháp tổ chức phản công tái chiếm đồi Độc Lập nhưng đều bị
-                  đánh lui
-                </li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>17-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>Quân Pháp ở Bản Kéo sợ hãi bỏ chạy</li>
               </ul>
             </div>
           </section>

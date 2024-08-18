@@ -22,7 +22,7 @@ export const Victory = () => {
       setRotateDegree((xValue / (window.innerWidth / 2)) * 20);
       // if (!isMouseInside) return; // Only update if mouse is inside the element
 
-      handlerWinSize();
+      // handlerWinSize();
       parallaxRefs.current.forEach((el) => {
         let speedx = el.dataset.speedx || 0;
         let speedy = el.dataset.speedy || 0;
@@ -43,7 +43,7 @@ export const Victory = () => {
 
     const imageElement = parallaxRefs.current[5]; // The image to be tracked
     const [imgRects] = imageElement.getClientRects();
-    
+
 
     // imageElement.addEventListener('mouseover', evt => {
     //   const distanceLeft = Math.abs(evt.clientX - imgRects.left);
@@ -89,29 +89,29 @@ export const Victory = () => {
       <main id='victory' className='victory-main'>
         <div className='absolute top-2 z-20 left-[50.75%] 3xl:left-[51.2%] transform -translate-x-1/2'>
           <h1 className="text-xl 3xl:text-[30px] font-semibold mb-6">
-          {isVietNamase ? (
-            <>
-              <span className="text-white relative">
-                CHIẾN THẮNG&nbsp;
-                <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-white"></span>
-              </span>
-              <span className="text-yellow relative">
-                ĐIỆN BIÊN PHỦ
-                <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
-              </span>
-            </>
-          ) : (
-            <>
-              <span className="text-white relative">
-                勝利&nbsp;
-                <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-white"></span>
-              </span>
-              <span className="text-yellow relative">
-                DIEN BIEN PHU
-                <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
-              </span>
-            </>
-          )}
+            {isVietNamase ? (
+              <>
+                <span className="text-white relative">
+                  CHIẾN THẮNG&nbsp;
+                  <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-white"></span>
+                </span>
+                <span className="text-yellow relative">
+                  ĐIỆN BIÊN PHỦ
+                  <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
+                </span>
+              </>
+            ) : (
+              <>
+                <span className="text-white relative">
+                  勝利&nbsp;
+                  <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-white"></span>
+                </span>
+                <span className="text-yellow relative">
+                  DIEN BIEN PHU
+                  <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
+                </span>
+              </>
+            )}
           </h1>
         </div>
 
@@ -138,21 +138,21 @@ export const Victory = () => {
         {
           isVietNamase ? (
             <>
-            <div className='text parallax'>
-              <h2>7/5/1954</h2>
-              <h1>Chiến Thắng Điện Biên Phủ</h1>
-          </div>
+              <div className='text parallax'>
+                <h2>7/5/1954</h2>
+                <h1>Chiến Thắng Điện Biên Phủ</h1>
+              </div>
             </>
           ) : (
             <>
-            <div className='text parallax'>
-              <h2>1954年5月7日</h2>
-              <h1>勝利Dien Bien Phu</h1>
-            </div>
+              <div className='text parallax'>
+                <h2>1954年5月7日</h2>
+                <h1>勝利Dien Bien Phu</h1>
+              </div>
             </>
           )
         }
-        
+
         <img
           ref={(el) => (parallaxRefs.current[2] = el)}
           src={midMan}

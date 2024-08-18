@@ -58,11 +58,11 @@ export default function Tactic2() {
         }}
       >
         <span className='relative' style={{ color: '#fcde6e' }}>
-          ĐÁNH CHẮC&nbsp;
+          Phương châm&nbsp;
           <span className='absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow'></span>
         </span>
         <span className='relative'>
-          TIẾN CHẮC
+          tác chiến
           <span className='absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black'></span>
         </span>
       </h2>
@@ -77,53 +77,43 @@ export default function Tactic2() {
           }}
         />
 
-        <div className='absolute pt-[100px] pl-[700px]' ref={rightSideRef}>
-          <section className='space-y-9 bg-yellow-50 font-sans mt-4 pr-24'>
-            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm'>
+        <div className='absolute pt-[100px] pl-[650px]' ref={rightSideRef}>
+          <section className='space-y-9 bg-yellow-50 font-sans mt-8 pr-24'>
+            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl font-medium'>
               <span
-                className='uppercase'
                 style={{
-                  fontSize: '24px',
+                  fontSize: '32px',
+                  fontWeight: 'bold',
                 }}
               >
                 Tại sao lại chọn đánh chắc, tiến chắc?
               </span>
-              <h2 className='text-lg font-bold'>13-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>
-                  Đúng 8 giờ sáng, Bộ đội ta bắn cháy hai chiếc máy bay Dakota
-                  của quân Pháp tại sân bay Mường Thanh
-                </li>
-                <li>
-                  17 giờ 5 phút, quân ta đồng loạt tấn công các cứ điểm Him Lam
-                </li>
-              </ul>
               <br />
-              <h2 className='text-lg font-bold'>14-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>7 giờ 30 phút, quân Pháp phản công ở Him Lam bất thành</li>
-                <li>16 giờ 45 phút, quân ta nổ súng đánh đồi Độc Lập</li>
-              </ul>
               <br />
-              <h2 className='text-lg font-bold'>15-03-1954</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>
-                  6 giờ 30 phút, lá cờ <strong>Quyết chiến quyết thắng</strong>{' '}
-                  được cắm trên đồi Độc Lập
+                <li className=''>
+                  Bác Hồ đã dặn: "Trận này chỉ được thắng không được thua vì
+                  thua là hết vốn"
                 </li>
                 <li>
-                  12 giờ 45 phút, trung tá Charles Piroth (Jean Charles Clément
-                  Piroth) tự sát
+                  Đánh nhanh thắng nhanh mang tính chủ quan và có phần mạo hiểm
                 </li>
                 <li>
-                  Quân Pháp tổ chức phản công tái chiếm đồi Độc Lập nhưng đều bị
-                  đánh lui
+                  Lực lượng quân ta không quen đánh địa hình bằng phẳng, có lợi
+                  thế đánh vào ban đêm và dễ ẩn nấp. Nếu đánh nhanh thắng nhanh
+                  thì phải đánh cả ngày lẫn đêm liên tục, không phát huy được
+                  hết sức mạnh của quân ta
                 </li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>17-03-1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>Quân Pháp ở Bản Kéo sợ hãi bỏ chạy</li>
+                <li>
+                  Tình hình đã thay đổi, Pháp không còn trạng thái "lâm thời
+                  phòng ngự" mà đã được xây dựng thành tập đoàn cứ điểm vững
+                  chắc với sự yểm trợ của pháo binh và không quân mạnh mẽ
+                </li>
+                <li>
+                  Địa hình Điện Biên Phủ dễ thủ khó công nên chọn cách đánh
+                  chắc, tiến chắc, bao vây và cắt tiếp tế của địch để dồn địch
+                  vào tình thế khó khăn rồi tấn công sẽ dễ hơn
+                </li>
               </ul>
             </div>
           </section>
