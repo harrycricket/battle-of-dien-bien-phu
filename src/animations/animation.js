@@ -16,7 +16,7 @@ export const preLoaderAnim = (onComplete) => {
       {
         opacity: 1,
         y: 0,
-        stagger: 0.2,
+        stagger: 0.1,
         duration: 0.1,
         ease: "power3.in",
       },

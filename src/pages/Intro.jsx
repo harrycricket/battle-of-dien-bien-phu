@@ -1,14 +1,31 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { preLoaderAnim } from "../animations/animation";
 
 const Intro = () => {
+    const [audio] = useState(new Audio('/typing.mp3'));
+
     useEffect(() => {
         document.body.style.overflow = 'hidden';
+
+        const handleUserInteraction = () => {
+            audio.play().catch((error) => {
+                console.log('Audio play failed:', error);
+            });
+            document.body.removeEventListener('click', handleUserInteraction);
+        };
+
+        document.body.addEventListener('click', handleUserInteraction);
 
         preLoaderAnim(() => {
             document.body.style.overflow = '';
         });
-    }, []);
+
+        return () => {
+            document.body.removeEventListener('click', handleUserInteraction);
+            audio.pause();
+            audio.currentTime = 0;
+        };
+    }, [audio]);
 
     return (
         <div
