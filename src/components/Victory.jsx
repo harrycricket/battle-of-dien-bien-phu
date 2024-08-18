@@ -192,7 +192,7 @@ export const Victory = () => {
       </main>
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-50'>
-        <a href='#battle'>
+        <a href='#context'>
           <div className='w-[35px] h-[64px] rounded-3xl border-4 border-primaryBgColor flex justify-center items-start p-2'>
             <motion.div
               animate={{

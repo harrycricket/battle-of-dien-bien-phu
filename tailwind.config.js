@@ -17,6 +17,9 @@ export default {
       transparent: 'transparent',
       yellow: '#fcde6e',
       'PrimaryBgTien': '#fff9e4',
+      primaryRed: '#85090f',
+      cardBgColor: '#fcde6e',
+      yellowText: '#e8b567'
     },
     fontSize: {
       'sm': '12px',

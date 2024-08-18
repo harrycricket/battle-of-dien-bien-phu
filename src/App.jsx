@@ -3,7 +3,6 @@ import Context from './components/Context';
 import Battle from './components/Battle';
 import Tactic from './components/Tactic';
 import Conclusion from './components/Conclusion';
-import Hero from './components/Hero';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -12,6 +11,8 @@ import { Victory } from './components/Victory';
 import Intro from './pages/Intro';
 import { useEffect } from 'react';
 import useSessionTransitionState from './hooks/useSessionTransitionState';
+import HeroList from './components/hero/HeroList';
+import Heroes from './components/Heroes';
 import useIntroLoadingState from './hooks/useIntroLoadingState';
 
 function App() {
@@ -54,7 +55,7 @@ function App() {
         <Victory />
         <Tactic />
         <Conclusion />
-        <Hero />
+        <Heroes />
         {/* <Footer /> */}
       </NextUIProvider>
     </>
