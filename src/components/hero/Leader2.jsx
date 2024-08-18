@@ -20,6 +20,7 @@ import VuongThuaVu from "../../assets/heroes/VuongThuaVu.jpg";
 import HoangMinhThao from "../../assets/heroes/HoangMinhThao.jpg";
 import LeQuangBa from "../../assets/heroes/LeQuangBa.jpg";
 import SongHao from "../../assets/heroes/SongHao.jpg";
+import HeroBg from "../../assets/heroes/HeroBg.png";
 
 const leaders = [
   {
@@ -103,41 +104,49 @@ export default function Leader2() {
       className=" bg-primaryBgColor h-[100vh] w-screen overflow-hidden flex flex-col justify-center ml-4"
     >
       {isVietnamese ? (
-        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+        <h2 className="text-center text-[30px] text-primaryRed font-bold my-4">
           LÃNH ĐẠO VÀ CHỈ HUY
         </h2>
       ) : (
-        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+        <h2 className="text-center text-[30px] text-primaryRed font-bold my-4">
           指導者と指揮官
         </h2>
       )}
-
-      <Swiper
-        slidesPerView={4}
-        pagination={{
-          clickable: true,
-        }}
-        keyboard={{
-          enabled: true,
-        }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        modules={[Pagination, Keyboard, Autoplay]}
-        className="w-full py-12 mySwiper"
-      >
-        {leaders.map((leader, index) => (
-          <SwiperSlide key={index} className="bg-center bg-cover w-[600px]">
-            <Hero
-              fullName={leader.fullName.toUpperCase()}
-              description={isVietnamese ? leader.description.toUpperCase() : leader.japanese}
-              year={leader.year}
-              image={leader.image}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div style={{
+        backgroundImage: `url(${HeroBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',  
+        width: '100%',
+      }}
+        className="flex justify-center items-center">
+        <Swiper
+          slidesPerView={2}
+          pagination={{
+            clickable: true,
+          }}
+          keyboard={{
+            enabled: true,
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          modules={[Pagination, Keyboard, Autoplay]}
+          className="w-full"
+        >
+          {leaders.map((leader, index) => (
+            <SwiperSlide key={index} className="bg-center bg-cover w-[600px]">
+              <Hero
+                fullName={leader.fullName.toUpperCase()}
+                description={isVietnamese ? leader.description : leader.japanese}
+                year={leader.year}
+                image={leader.image}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }
