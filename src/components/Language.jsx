@@ -27,7 +27,7 @@ const Language = () => {
                     <LuLanguages />
                 </button>
                 {showMenu && (
-                    <div className="absolute top-full mt-2 right-0 w-40 bg-white border border-grey shadow-lg rounded-md z-50">
+                    <div className="absolute top-full mt-2 right-0 w-40 bg-white bg-opacity-40 backdrop-blur-sm border border-grey shadow-lg rounded-md z-50">
                         <div className="absolute top-[-12px] left-0 w-full h-3 bg-transparent rounded-t-md"></div>
                         <ul className="text-black text-lg">
                             {language === 'jp' ? (
