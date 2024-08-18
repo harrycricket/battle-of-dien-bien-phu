@@ -47,10 +47,10 @@ function App() {
         <Home />
         <Context />
         <Battle />
+        <Victory />
         <Hero />
         <Conclusion />
-        <Footer />
-        <Victory />
+        {/* <Footer /> */}
       </NextUIProvider>
     </>
   );
