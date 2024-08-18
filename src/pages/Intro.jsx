@@ -14,7 +14,7 @@ const Intro = () => {
             document.body.removeEventListener('click', handleUserInteraction);
         };
 
-        document.body.addEventListener('click', handleUserInteraction);
+        // document.body.addEventListener('click', handleUserInteraction);
 
         preLoaderAnim(() => {
             document.body.style.overflow = '';

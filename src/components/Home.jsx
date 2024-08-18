@@ -23,7 +23,7 @@ const Home = () => {
       const newTextChars = newTextRef.current.querySelectorAll('.char');
 
       const timeline = gsap.timeline();
-
+      const startTime = 3;
       timeline.fromTo(
         chars,
         { opacity: 0, x: -20 },
@@ -38,7 +38,7 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 7 : 0
+        firstTimeRef.current ? startTime : 0
       );
 
       timeline.fromTo(
@@ -55,7 +55,7 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 7 : 0
+        firstTimeRef.current ? startTime : 0
       );
 
       timeline.fromTo(
@@ -72,14 +72,14 @@ const Home = () => {
           duration: 0.5,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 7.5 : 0.5
+        firstTimeRef.current ? startTime : 0.5
       );
 
       timeline.fromTo(
         fistRef.current,
         { y: '100%', opacity: 0 },
         { y: '0%', opacity: 1, duration: 1.5, ease: 'power2.out' },
-        firstTimeRef.current ? 7 : 0
+        firstTimeRef.current ? startTime + 0.5 : 0
       );
 
       additionalTexts.forEach((el, index) => {
@@ -93,7 +93,7 @@ const Home = () => {
             duration: 0.5,
             ease: 'power2.out',
           },
-          firstTimeRef.current ? 7 : 0
+          firstTimeRef.current ? startTime + 0.5 : 0
         );
       });
 
@@ -111,7 +111,7 @@ const Home = () => {
           duration: 2,
           ease: 'power2.out',
         },
-        firstTimeRef.current ? 7 : 0
+        firstTimeRef.current ? startTime + 0.5 : 0
       );
       firstTimeRef.current = false;
     };
