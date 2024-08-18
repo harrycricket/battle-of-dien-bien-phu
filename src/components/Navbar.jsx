@@ -75,7 +75,7 @@ const Navbar = () => {
                         className={`${language === "vi" ? "vertical-text text-sm hover:border-l-[2.5px] hover:border-yellow" : "vertical-text-jp text-xl hover:border-r-[2.5px] hover:border-yellow"} uppercase ${getSession() === "context" ? `${language === "vi" ? "border-l-[2.5px] border-yellow" : "border-r-[2.5px] border-yellow"}` : ""}`}
                         onClick={() => handleMenuClick("context")}
                     >
-                        {language === "vi" ? "Bối cảnh" : "背景"}
+                        {language === "vi" ? "Bối cảnh lịch sử" : "背景"}
                     </a>
                     <a
                         // href="#"

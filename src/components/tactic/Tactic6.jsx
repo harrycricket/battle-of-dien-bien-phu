@@ -2,7 +2,7 @@ import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
-export default function Tactic2() {
+export default function Tactic6() {
   const leftSideRef = useRef(null);
   const rightSideRef = useRef(null);
   const language = useSelector((state) => state.language.language);
@@ -97,7 +97,7 @@ export default function Tactic2() {
         <div
           className='left-side min-w-full'
           style={{
-            backgroundImage: `url('/images/battle/keophao.jpg')`,
+            backgroundImage: `url('/images/battle/concui.png')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'left',
@@ -105,56 +105,41 @@ export default function Tactic2() {
         />
 
         <div className='absolute pt-[100px] pl-[650px]' ref={rightSideRef}>
-          <section className='space-y-9 bg-yellow-50 font-sans mt-24 pr-36'>
-            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl font-medium'>
+          <section className='space-y-9 bg-yellow-50 font-sans pt-8 pr-24'>
+            <div className='bg-yellow-500 text-black text-center py-3 px-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl font-medium'>
               {language === 'vi' ? (
                 <span
                   style={{
-                    fontSize: '28px',
+                    fontSize: '32px',
                     fontWeight: 'bold',
                   }}
                 >
-                  Đánh chắc, tiến chắc
+                  Nghệ thuật quân sự sáng tạo trong chiến dịch Điện Biên Phủ
                 </span>
               ) : (
                 <span
                   style={{
-                    fontSize: '28px',
+                    fontSize: '32px',
                     fontWeight: 'bold',
                   }}
                 >
-                  しっかり戦って、しっかり進め
+                  ディエンビエンフー作戦における創造的な軍事芸術
                 </span>
               )}
-              <br />
+            </div>
+            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl font-medium'>
               {language === 'vi' ? (
-                <ul className='list-disc pl-10 space-y-2 italic'>
-                  <li>
-                    Bao vây cứ điểm của địch, dùng hệ thống hầm hào như một
-                    chiếc khiên bảo vệ bộ đội trước đạn pháo của kẻ thù, từng
-                    bước tiến vào lòng địch
-                  </li>
-                  <li>
-                    Tiến công từng vị trí một, vây chặt địch, cắt tiếp tế của
-                    địch, buộc địch rơi vào tình thế khó khăn
-                  </li>
-                  <li>
-                    Trong đêm ngày 25/1, Đại tướng Võ Nguyên Giáp đã đổi phương
-                    châm tác chiến thành “đánh chắc, tiến chắc”
-                  </li>
-                </ul>
+                <p className='list-disc italic'>
+                  <p className='text-3xl mb-2'>Sáng tạo trong các lối đánh</p>
+                  Các chiến sĩ đã có sáng kiến cuốn rơm thành những con cúi lớn
+                  để ngụy trang khi đào giao thông hào và tránh những đường đạn
+                  bắn thẳng của địch.
+                </p>
               ) : (
-                <ul className='list-disc pl-10 space-y-2 italic'>
-                  <li>
-                    敵の基地を取り囲み、塹壕システムを盾として使用して敵の大砲から兵士を守り、敵の中心部に一歩ずつ前進してください。
-                  </li>
-                  <li>
-                    各陣地を一つずつ攻撃し、敵を包囲して補給を遮断し、困難な状況に追い込む
-                  </li>
-                  <li>
-                    1月25日夜、ボー・グエン・ザップ将軍は戦闘のモットーを「堅実に戦い、堅実に前進する」に変更した
-                  </li>
-                </ul>
+                <p className='list-disc italic'>
+                  <p className='text-3xl mb-2'>戦闘スタイルにおける創造性</p>
+                  兵士たちは、塹壕を掘るときにカモフラージュし、敵の直接弾丸を避けるために、わらを丸めて大きな弓を作る率先力を持っていました。
+                </p>
               )}
             </div>
           </section>
