@@ -96,7 +96,7 @@ export default function Context2() {
                 </h2>
                 <ul className="list-disc pl-6 space-y-2 italic">
                   <li>
-                    sẽ tiêu diệt phần lớn bộ đội chủ lực của ta, kiểm soát lãnh thổ Việt Nam <br />
+                    Sẽ tiêu diệt phần lớn bộ đội chủ lực của ta, kiểm soát lãnh thổ Việt Nam <br />
                     và bình định cả Nam Đông Dương.
                   </li>
                 </ul>
@@ -110,8 +110,8 @@ export default function Context2() {
                   LÀ NỖ LỰC CUỐI CÙNG CỦA THỰC DÂN PHÁP VÀ CAN THIỆP MỸ
                 </h2>
                 <ul className="list-disc pl-6 space-y-2 italic">
-                  <li>nhằm giành lại thế chủ động có tính quyết định về quân sự trên chiến trường</li>
-                  <li>làm cơ sở cho một giải pháp chính trị có lợi cho chúng</li>
+                  <li>Nhằm giành lại thế chủ động có tính quyết định về quân sự trên chiến trường</li>
+                  <li>Làm cơ sở cho một giải pháp chính trị có lợi cho chúng</li>
                 </ul>
               </div>
             </section>

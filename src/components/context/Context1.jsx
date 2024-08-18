@@ -114,7 +114,7 @@ export default function Context1() {
                     fontStyle: 'italic',
                   }}
                 >
-                  là đòn quyết định làm thất bại hoàn toàn chiến lược đánh nhanh, thắng nhanh của địch, bảo vệ an toàn căn cứ địa cách mạng và đầu não kháng chiến, mở ra giai đoạn mới của cuộc kháng chiến
+                  Là đòn quyết định làm thất bại hoàn toàn chiến lược đánh nhanh, thắng nhanh của địch, bảo vệ an toàn căn cứ địa cách mạng và đầu não kháng chiến, mở ra giai đoạn mới của cuộc kháng chiến
                 </span>
               </div>
             </div>
@@ -140,7 +140,7 @@ export default function Context1() {
                     fontStyle: 'italic',
                   }}
                 >
-                  một bước chuyển cơ bản cho cuộc kháng chiến bước vào giai đoạn mới, giai đoạn ta nắm quyền chủ động chiến lược trên chiến trường chính Bắc Bộ, chuyển hẳn sang liên tục tấn công và phản công địch
+                  Một bước chuyển cơ bản cho cuộc kháng chiến bước vào giai đoạn mới, giai đoạn ta nắm quyền chủ động chiến lược trên chiến trường chính Bắc Bộ, chuyển hẳn sang liên tục tấn công và phản công địch
                 </span>
               </div>
             </div>
