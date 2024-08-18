@@ -56,12 +56,13 @@ const SwiperSection = ({ index, children }) => {
     }, [currentIndex == index, isSliding]);
 
     return (
-        <Swiper
+        <Swiper className="swiper-no-swiping"
             ref={swiperRef}
             spaceBetween={0}
             slidesPerView={1}
             autoplay={false}
             keyboard={true}
+            simulateTouch={false}
         >
             {children}
         </Swiper>
