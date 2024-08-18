@@ -59,7 +59,7 @@ const Navbar = () => {
             <div className="flex flex-col justify-between h-full">
                 <div className="flex flex-col justify-center items-center p-4 text-white">
                     <a
-                        href="#home"
+                        href="#"
                         className={`vertical-text text-base uppercase ${getSession() === "home" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("home")}
                     >
@@ -68,14 +68,14 @@ const Navbar = () => {
                 </div>
                 <nav className="flex flex-col items-center gap-6 text-white p-4">
                     <a
-                        href="#context"
+                        // href="#"
                         className={`vertical-text text-sm uppercase ${getSession() === "context" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("context")}
                     >
                         Bối cảnh
                     </a>
                     <a
-                        href="#battle"
+                        // href="#"
                         className={`vertical-text text-sm uppercase ${getSession() === "battle" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("battle")}
                     >
@@ -89,14 +89,14 @@ const Navbar = () => {
                         "Đánh chắc, tiến chắc"
                     </a> */}
                     <a
-                        href="#hero"
+                        // href="#"
                         className={`vertical-text text-sm uppercase ${getSession() === "hero" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("hero")}
                     >
                         Các vị anh hùng
                     </a>
                     <a
-                        href="#summary"
+                        // href="#"
                         className={`vertical-text text-sm uppercase ${getSession() === "summary" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("summary")}
                     >
