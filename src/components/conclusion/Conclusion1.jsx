@@ -46,12 +46,11 @@ const Conclusion1 = () => {
 
             <div className='w-full h-full flex items-center justify-center px-4 animated-text' ref={leftSideRef}>
                 <div className='text-center font-bold min-w-6xl bg-yellow bg-opacity-70 p-6 rounded-md'>
-                    <h1 className='text-4xl md:text-8xl lg:text-9xl mb-6 text-black font-extrabold text-shadow-cus'>
-                    1954年5月7日
-                    </h1>
-
                     {isVietNamase ? (
                     <>
+                        <h1 className='text-4xl md:text-8xl lg:text-9xl mb-6 text-black font-extrabold text-shadow-cus'>
+                        7/5/1954
+                        </h1>
                         <h1 className='text-4xl md:text-8xl lg:text-9xl mb-4 text-black font-extrabold text-shadow-cus uppercase'>
                         Việt Nam Giành Chiến Thắng Điện Biên Phủ
                         <br />
@@ -69,6 +68,9 @@ const Conclusion1 = () => {
                     </>
                     ) : (
                     <>
+                        <h1 className='text-4xl md:text-8xl lg:text-9xl mb-6 text-black font-extrabold text-shadow-cus'>
+                        1954年5月7日
+                        </h1>
                         <h1 className='text-4xl md:text-8xl lg:text-9xl mb-4 text-black font-extrabold text-shadow-cus uppercase'>
                         Dien Bien Phuで勝利を収める
                         <br />
