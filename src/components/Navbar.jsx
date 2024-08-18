@@ -3,15 +3,14 @@ import { useEffect, useState } from "react";
 import useSessionTransitionState from "../hooks/useSessionTransitionState";
 
 const Navbar = () => {
-    const { index, getSession, setSession } = useSessionTransitionState();
-    const [isScrolling, setIsScrolling] = useState(false);
+    const { index, setTransiting, getSession, setSession } = useSessionTransitionState();
 
     const handleMenuClick = (menu) => {
         setSession(menu);
     };
 
     useEffect(() => {
-        setIsScrolling(true);
+        setTransiting(true);
 
         const position = index * window.innerHeight;
         window.scrollTo({
@@ -20,7 +19,7 @@ const Navbar = () => {
         });
 
         const scrollTimeout = setTimeout(() => {
-            setIsScrolling(false);
+            setTransiting(false);
         }, 500);
 
         return () => {
@@ -28,46 +27,32 @@ const Navbar = () => {
         };
     }, [index]);
 
-    const handleWheel = (event) => {
-        if (isScrolling) {
-            event.preventDefault();
-        }
-    };
+    // useEffect(() => {
+    //     const sections = document.querySelectorAll("section");
+    //     const options = {
+    //         root: null,
+    //         rootMargin: "0px",
+    //         threshold: 0.1,
+    //     };
 
-    useEffect(() => {
-        document.addEventListener('wheel', handleWheel, { passive: false });
+    //     const observer = new IntersectionObserver((entries) => {
+    //         entries.forEach((entry) => {
+    //             if (entry.isIntersecting) {
+    //                 setSession(entry.target.id);
+    //             }
+    //         });
+    //     }, options);
 
-        return () => {
-            document.removeEventListener('wheel', handleWheel);
-        };
-    }, [isScrolling]);
+    //     sections.forEach((section) => {
+    //         observer.observe(section);
+    //     });
 
-    useEffect(() => {
-        const sections = document.querySelectorAll("section");
-        const options = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setSession(entry.target.id);
-                }
-            });
-        }, options);
-
-        sections.forEach((section) => {
-            observer.observe(section);
-        });
-
-        return () => {
-            sections.forEach((section) => {
-                observer.unobserve(section);
-            });
-        };
-    }, []);
+    //     return () => {
+    //         sections.forEach((section) => {
+    //             observer.unobserve(section);
+    //         });
+    //     };
+    // }, []);
 
     return (
         <header className="navbar">

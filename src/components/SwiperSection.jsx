@@ -12,35 +12,32 @@ const SwiperSection = ({ index, children }) => {
     const isBeginningRef = useRef(true);
     const isEndRef = useRef(false);
     const isSliding = useRef(false);
-    const { index: currentIndex, getIsBeginning, getIsEnd, setIsBeginning, setIsEnd } = useSessionTransitionState();
+    const { index: currentIndex, sliding, transiting, setSliding, getIsBeginning, getIsEnd, setIsBeginning, setIsEnd } = useSessionTransitionState();
 
     const handleWheel = (event) => {
-        if (swiperRef.current && !isSliding.current) {
+        event.preventDefault();
+        console.log("index : " + index + " - transiting " + transiting + " - sliding " + sliding);
+        if (!transiting && !isSliding.current && swiperRef.current) {
             const swiper = swiperRef.current.swiper;
-            console.log("REF ", isBeginningRef.current, isEndRef.current);
-            console.log("STATE ", getIsBeginning(index), getIsEnd(index));
 
-            if (event.deltaY < 0 && !getIsEnd(index)) {
+            if (event.deltaY < 0 && !swiper.isBeginning) {
+                setSliding(true);
+                isSliding.current = true;
                 swiper.slidePrev();
-                isSliding.current = true;
+                // console.log("index : " + index + " - onprev " + swiper.activeIndex);
             }
 
-            if (event.deltaY > 0 && !getIsBeginning(index)) {
+            if (event.deltaY > 0 && !swiper.isEnd) {
+                setSliding(true);
+                isSliding.current = true;
                 swiper.slideNext();
-                isSliding.current = true;
+                // console.log("index : " + index + " - onnext " + swiper.activeIndex);
             }
 
-
-            setIsBeginning(index, isBeginningRef.current && swiper.isBeginning)
-            setIsEnd(index, isEndRef.current && swiper.isEnd);
-
-
-            isBeginningRef.current = booleanXOR(swiper.isBeginning, getIsBeginning(index));
-            isEndRef.current = booleanXOR(swiper.isEnd, getIsEnd(index));
-            console.log("isEndRef.current ", isEndRef.current);
-
-
+            setIsBeginning(index, swiper.isBeginning);
+            setIsEnd(index, swiper.isEnd);
             setTimeout(() => {
+                setSliding(false);
                 isSliding.current = false;
             }, 500);
         }
@@ -53,7 +50,7 @@ const SwiperSection = ({ index, children }) => {
         return () => {
             document.removeEventListener('wheel', handleWheel);
         };
-    }, [currentIndex == index, isSliding]);
+    }, [currentIndex == index, transiting, isSliding]);
 
     return (
         <Swiper className="swiper-no-swiping"

@@ -28,7 +28,7 @@ export default function Context4() {
 
     animateOnScroll(leftSideRef.current, leftSideAnimation);
 
-    rightSideRefs.current.forEach((ref, index) => {
+    rightSideRefs.current.forEach((ref) => {
       const rightSideAnimation = gsap.fromTo(
         ref,
         { opacity: 0, y: 50 },

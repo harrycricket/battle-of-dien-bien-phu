@@ -15,6 +15,8 @@ interface SessionState {
   isBeginning: boolean[];
   transiting: boolean;
   setTransiting: (value: boolean) => void;
+  sliding: boolean;
+  setSliding: (value: boolean) => void;
   setIndex: (value: number) => void;
   getSession: () => string;
   setSession: (value: string) => void;
@@ -35,6 +37,8 @@ const useSessionTransitionState = create<SessionState>((set, get) => ({
   },
   transiting: false, // Initialize transiting
   setTransiting: (value: boolean) => set({ transiting: value }), // Implement setTransiting
+  sliding: false, // Initialize transiting
+  setSliding: (value: boolean) => set({ sliding: value }), // Implement setTransiting
   setSession: (value: string) => {
     const newIndex = getIndexOfSession(value);
     if (newIndex !== -1) {
