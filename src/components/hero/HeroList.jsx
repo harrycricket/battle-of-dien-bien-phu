@@ -40,35 +40,35 @@ const heroes = [
   {
     fullName: "TRẦN CAN",
     description:
-      "NGƯỜI CẮM LÁ CỜ CHIẾN THẮNG ĐẦU TIÊN Ở CHIẾN DỊCH ĐIỆN BIÊN PHỦ",
+      "Người cắm lá cờ chiến thắng đầu tiên ở chiến dịch Điện Biên Phủ",
     japanese: "ディエンビエンフー作戦で最初に勝利の旗を掲げた人",
     year: "1931 - 1954",
     image: TranCan,
   },
   {
     fullName: "Bế Văn Đàn",
-    description: "ANH HÙNG LẤY VAI LÀM GIÁ SÚNG",
+    description: "Anh hùng lấy vai làm giá súng",
     japanese: "銃架として肩を使った英雄",
     year: "1930-1953",
     image: BeVanDan,
   },
   {
     fullName: "TÔ VĨNH DIỆN",
-    description: "ANH HÙNG LẤY THÂN MÌNH CHẮN PHÁO",
+    description: "Anh hùng lấy thân mình chắn pháo",
     japanese: "砲弾を体で防いだ英雄",
     year: "1924 – 1954",
     image: ToVinhDien,
   },
   {
     fullName: "Hoàng Văn Nô",
-    description: "ANH HÙNG Dùng lưỡi lê tiêu diệt 5 tên lính Pháp",
+    description: "Anh hùng dùng lưỡi lê tiêu diệt 5 tên lính Pháp",
     japanese: "銃剣でフランス兵5人を倒した英雄",
     year: "1932 - 1954",
     image: HoangVanNo,
   },
   {
     fullName: "Phan Đình Giót",
-    description: "anh hùng Lấy thân mình lấp lỗ châu mai",
+    description: "Anh hùng lấy thân mình lấp lỗ châu mai",
     japanese: "体を盾にしてトーチカを封じた英雄",
     year: "1922 - 1954",
     image: PhanDinhGiot,
@@ -209,11 +209,11 @@ export default function HeroList() {
     >
       {/* Những anh hùng tiêu biểu */}
       {isVietnamese ? (
-        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+        <h2 className="text-center text-[30px] text-primaryRed font-bold my-4">
           NHỮNG ANH HÙNG TIÊU BIỂU KHÁC
         </h2>
       ) : (
-        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+        <h2 className="text-center text-[30px] text-primaryRed font-bold my-4">
           他の代表的な英雄たち
         </h2>
       )}
@@ -241,14 +241,14 @@ export default function HeroList() {
           slideShadows: false,
         }}
         modules={[EffectCoverflow, Pagination, Keyboard, Autoplay]}
-        className="w-full py-12 mySwiper"
+        className="w-full mySwiper"
       >
         {heroes.map((hero, index) => (
           <SwiperSlide key={index} className="bg-center bg-cover w-[600px]">
             <Hero
               fullName={hero.fullName.toUpperCase()}
               // description={hero.description.toUpperCase()}
-              description={isVietnamese ? hero.description.toUpperCase() : hero.japanese}
+              description={isVietnamese ? hero.description : hero.japanese}
               year={hero.year}
               image={hero.image}
             />

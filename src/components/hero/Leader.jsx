@@ -29,11 +29,11 @@ export default function Leader() {
       className=" bg-primaryBgColor h-[100vh] w-screen overflow-hidden pb-11"
     >
       {isVietnamese ? (
-        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+        <h2 className="text-center text-[30px] text-primaryRed font-bold my-4">
           LÃNH ĐẠO VÀ CHỈ HUY
         </h2>
       ) : (
-        <h2 className="text-center text-[50px] text-primaryRed font-bold my-4">
+        <h2 className="text-center text-[30px] text-primaryRed font-bold my-4">
           指導者と指揮官
         </h2>
       )}
@@ -61,30 +61,30 @@ export default function Leader() {
         ></div>
         <SwiperSlide>
           <div className="relative h-full">
-            <div className="p-32">
+            <div className="px-24 py-10">
               {isVietnamese ? (
-                <div className="text-[100px] mb-4" data-swiper-parallax="-500">
+                <div className="text-[70px]" data-swiper-parallax="-500">
                   Chủ tịch
                 </div>
               ) : (
-                <div className="text-[100px] mb-4" data-swiper-parallax="-500">
+                <div className="text-[70px]" data-swiper-parallax="-500">
                   国家主席
                 </div>
               )}
 
               <div
-                className="text-[150px] font-bold mb-4 text-yellowText"
+                className="text-[80px] font-bold mb-4 text-yellowText"
                 data-swiper-parallax="-200"
               >
                 HỒ CHÍ MINH
               </div>
               <div
-                className="text-[40px] italic mb-4"
+                className="text-[23px] italic mb-4"
                 data-swiper-parallax="-200"
               >
                 (1890 - 1969)
               </div>
-              <div className="text-[40px] w-2/3 " data-swiper-parallax="-300">
+              <div className="text-[20px] w-2/3 " data-swiper-parallax="-300">
                 {isVietnamese ? (
                   <p className="leading-relaxed">
                     Chủ tịch Hồ Chí Minh đóng vai trò quan trọng trong việc định
@@ -118,30 +118,30 @@ export default function Leader() {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative h-full">
-            <div className="p-28">
+            <div className="px-24 py-10">
               {isVietnamese ? (
-                <div className="text-[100px]" data-swiper-parallax="-500">
+                <div className="text-[70px]" data-swiper-parallax="-500">
                   Đại tướng, Tổng Tư lệnh
                 </div>
               ) : (
-                <div className="text-[100px]" data-swiper-parallax="-500">
+                <div className="text-[70px]" data-swiper-parallax="-500">
                   大将、総司令官
                 </div>
               )}
 
               <div
-                className="text-[140px] font-bold mb-4 text-yellowText"
+                className="text-[80px] font-bold mb-4 text-yellowText"
                 data-swiper-parallax="-200"
               >
                 VÕ NGUYÊN GIÁP
               </div>
               <div
-                className="text-[35px] italic mb-4"
+                className="text-[23px] italic mb-4"
                 data-swiper-parallax="-200"
               >
                 (1911-2013)
               </div>
-              <div className="text-[40px] w-2/3 " data-swiper-parallax="-300">
+              <div className="text-[20px] w-2/3 " data-swiper-parallax="-300">
                 {isVietnamese ? (
                   <p className="leading-relaxed">
                     Đại tướng Võ Nguyên Giáp là người trực tiếp chỉ huy chiến
