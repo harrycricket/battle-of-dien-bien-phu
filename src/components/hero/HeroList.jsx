@@ -181,7 +181,7 @@ const heroes = [
 
 export default function HeroList() {
   return (
-    <section id="hero-list" className=" bg-primaryBgColor">
+    <section id="hero-list" className=" bg-primaryBgColor h-screen w-screen overflow-hidden pb-11">
 
       <h2 className="text-center text-3xl font-bold mb-8">
         CHỈ HUY VÀ LÃNH ĐẠO

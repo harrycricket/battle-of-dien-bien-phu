@@ -1,0 +1,157 @@
+.victory-main{
+    position: relative;
+    background-color: #fcde6e;
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+}
+
+.bg-img {
+    /* position: absolute; 
+    width: 194.67%;
+    top: 65%;
+    left: 50%; */
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    z-index: 0;
+}
+
+.left-man{
+    position: absolute;
+    width: 30%;
+    top: 65%;
+    left: 20.81%;
+    z-index: 1;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fcde6e;
+    z-index: 2;
+}
+
+.text h2{
+    font-weight: 100;
+    font-size: 5rem;
+}
+
+.text h1{
+    font-weight: 800;
+    font-size: 6.5rem;
+    line-height: 1.3;
+}
+
+.mid-man{
+    position: absolute;
+    width: 80%;
+    top: 49%;
+    left: 50%;
+    z-index: 3;
+}
+
+.right-man{
+    position: absolute;
+    width: 25%;
+    top: 65%;
+    left: 80.11%;
+    z-index: 1;
+}
+.front {
+    position: absolute;
+    width: 194.44%;
+    top: 90%;
+    left: 50%;
+    z-index: 4;
+}
+
+.light {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+
+.parallax {
+    pointer-events: none;
+    transition: 0.45s cubic-bezier(.1,.48,.59,1.04);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 575.98px) {
+    .victory-main{
+        background-color: white;
+    }
+
+    .bg-img{
+        width: 194.44% !important;
+        height: 100% !important;
+    }
+
+    .left-man{
+        top: 70%;
+    }
+    
+    .mid-man{
+        top: 53%;
+    }
+    
+    .right-man{
+        top: 65%;
+    }
+
+    .text h1{
+        font-size: 1rem;
+    }
+
+    .text h2{
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .victory-main{
+        background-color: white;
+    }
+    .left-man{
+        top: 75%;
+    }
+    
+    .mid-man{
+        top: 53%;
+    }
+    
+    .right-man{
+        top: 65%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .victory-main{
+        background-color: white;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .victory-main{
+        background-color: white;
+    }
+
+    .left-man{
+        top: 100%;
+    }
+    
+    .mid-man{
+        top: 53%;
+    }
+    
+    .right-man{
+        top: 65%;
+    }
+}

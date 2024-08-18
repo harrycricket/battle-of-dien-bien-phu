@@ -1,5 +1,23 @@
-import React from 'react';
+import React from 'react'
+import Conclusion1 from './conclusion/Conclusion1';
+import SwiperSection from './SwiperSection';
+import { SwiperSlide } from 'swiper/react';
+import Conclusion2 from './conclusion/Conclusion2';
 
-export default function Conclusion() {
-  return <section id='conclusion' className='min-h-[100vh] pt-[90px] bg-primaryBgColor'>Conclusion</section>;
-}
+export const Conclusion = () => {
+  return (
+    <div className="h-screen w-screen overflow-hidden ">
+       <SwiperSection index={4}>
+        <SwiperSlide>
+          <Conclusion1/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <Conclusion2/>
+        </SwiperSlide>
+      </SwiperSection>
+    </div>
+    
+  )
+};
+
+export default  Conclusion
