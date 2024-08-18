@@ -1,35 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { preLoaderAnim } from "../animations/animation";
+import useIntroLoadingState from "../hooks/useIntroLoadingState";
 
 const Intro = () => {
-    const [audio] = useState(new Audio('/typing.mp3'));
-
+    const { setIsIntroLoading } = useIntroLoadingState();
     useEffect(() => {
-        document.body.style.overflow = 'hidden';
-
-        const handleUserInteraction = () => {
-            audio.play().catch((error) => {
-                console.log('Audio play failed:', error);
-            });
-            document.body.removeEventListener('click', handleUserInteraction);
-        };
-
-        // document.body.addEventListener('click', handleUserInteraction);
-
+        document.body.style.overflow = 'hidden !important';
         preLoaderAnim(() => {
             document.body.style.overflow = '';
+            setIsIntroLoading(false);
+            // console.log("loaded...", isIntroLoading);
         });
-
-        return () => {
-            document.body.removeEventListener('click', handleUserInteraction);
-            audio.pause();
-            audio.currentTime = 0;
-        };
-    }, [audio]);
+    }, []);
 
     return (
         <div
-            className="preloader fixed inset-0 z-[1000] flex flex-col items-center justify-center text-white bg-PrimaryBgTien"
+            className="select-none preloader fixed inset-0 z-[1000] flex flex-col items-center justify-center text-white bg-PrimaryBgTien"
         >
             <div
                 className="absolute inset-0 opacity-70"
