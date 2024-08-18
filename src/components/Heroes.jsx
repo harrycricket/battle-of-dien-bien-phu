@@ -8,7 +8,7 @@ import Leader2 from "./hero/Leader2";
 export const Heroes = () => {
   return (
     <div className="h-screen w-screen overflow-hidden ">
-      <SwiperSection index={5}>
+      <SwiperSection index={6}>
         <SwiperSlide>
           <Leader />
         </SwiperSlide>

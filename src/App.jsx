@@ -55,7 +55,7 @@ function App() {
         <Victory />
         <Tactic />
         <Conclusion />
-        <HeroList />
+        <Heroes />
         {/* <Footer /> */}
       </NextUIProvider>
     </>
