@@ -8,12 +8,12 @@ import useSessionTransitionState from '../hooks/useSessionTransitionState';
 const SwiperSection = ({ index, children }) => {
     const swiperRef = useRef(null);
     const isSliding = useRef(false);
-    const { index: currentIndex, sliding, transiting, setSliding, setIsBeginning, setIsEnd } = useSessionTransitionState();
+    const { index: currentIndex, transiting, setSliding, setIsBeginning, setIsEnd } = useSessionTransitionState();
 
     const handleWheel = (event) => {
         event.preventDefault();
         // console.log("index : " + index + " - transiting " + transiting + " - sliding " + sliding);
-        if (!transiting && !isSliding.current && swiperRef.current) {
+        if (!transiting && !isSliding.current && index == currentIndex && swiperRef.current) {
             const swiper = swiperRef.current.swiper;
 
             if (event.deltaY < 0 && !swiper.isBeginning) {
@@ -50,7 +50,7 @@ const SwiperSection = ({ index, children }) => {
         return () => {
             document.removeEventListener('wheel', handleWheel);
         };
-    }, [currentIndex == index, transiting, isSliding]);
+    }, [currentIndex, transiting, isSliding]);
 
     return (
         <Swiper className="swiper-no-swiping"
