@@ -1,6 +1,7 @@
 // import { useEffect } from "react";
 import { useEffect, useState } from "react";
 import useSessionTransitionState from "../hooks/useSessionTransitionState";
+import { IoHome } from "react-icons/io5";
 
 const Navbar = () => {
     const { index, setTransiting, getSession, setSession } = useSessionTransitionState();
@@ -59,11 +60,11 @@ const Navbar = () => {
             <div className="flex flex-col justify-between h-full">
                 <div className="flex flex-col justify-center items-center p-4 text-white">
                     <a
-                        href="#"
+                        // href="#"
                         className={`vertical-text text-base uppercase ${getSession() === "home" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("home")}
                     >
-                        Điện Biên Phủ
+                        <IoHome size={24} style={{ transform: 'rotate(90deg)' }} className="opacity-60"/>
                     </a>
                 </div>
                 <nav className="flex flex-col items-center gap-6 text-white p-4">
@@ -79,21 +80,14 @@ const Navbar = () => {
                         className={`vertical-text text-sm uppercase ${getSession() === "battle" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("battle")}
                     >
-                        Các trận đánh
+                        Các đợt tấn công
                     </a>
-                    {/* <a
-                        href="#tactic"
+                    <a
+                        // href="#tactic"
                         className={`vertical-text text-sm uppercase ${getSession() === "tactic" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("tactic")}
                     >
-                        "Đánh chắc, tiến chắc"
-                    </a> */}
-                    <a
-                        // href="#"
-                        className={`vertical-text text-sm uppercase ${getSession() === "hero" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
-                        onClick={() => handleMenuClick("hero")}
-                    >
-                        Các vị anh hùng
+                        Phương châm tác chiến
                     </a>
                     <a
                         // href="#"
@@ -102,6 +96,13 @@ const Navbar = () => {
                     >
                         Tổng kết
                     </a>
+                    {/* <a
+                        href="#hero"
+                        className={`vertical-text text-sm uppercase ${getSession() === "hero" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
+                        onClick={() => handleMenuClick("hero")}
+                    >
+                        Các vị anh hùng
+                    </a> */}
                 </nav>
             </div>
         </header>
