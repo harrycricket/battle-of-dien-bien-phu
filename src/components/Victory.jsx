@@ -13,6 +13,7 @@ export const Victory = () => {
     const handleMouseMove = (e) => {
       setxValue(e.clientX - window.innerWidth / 2);
       setyValue(e.clientY - window.innerHeight / 2);
+
       setRotateDegree((xValue / (window.innerWidth / 2)) * 20);
 
       handlerWinSize();
@@ -52,13 +53,13 @@ export const Victory = () => {
 
   return (
     <>
-    <main>
-      <img ref={(el) => parallaxRefs.current[0] = el} src={background} alt="" data-speedx="0" data-speedy="0.03" data-speedz="0.01" data-rotation="0.01" className="parallax bg-img" />
+    <main id='victory' className='victory-main'>
+      <img ref={(el) => parallaxRefs.current[0] = el} src={background} alt="" data-speedx="0" data-speedy="0.03" data-speedz="0.01" data-rotation="0.01" className="parallax bg-img w-screen h-screen" />
       <img ref={(el) => parallaxRefs.current[1] = el} src={leftMan} alt="" data-speedx="0.15" data-speedy="0.08"  data-speedz="0.1" data-rotation="0.5"  className="parallax left-man" />
       <img ref={(el) => parallaxRefs.current[2] = el} src={midMan} alt="" data-speedx="0.1" data-speedy="0.05"  data-speedz="0.2" data-rotation="0.5"  className="parallax mid-man" />
       <img ref={(el) => parallaxRefs.current[3] = el} src={rightMan} alt="" data-speedx="0.05" data-speedy="0.03"  data-speedz="0.1" data-rotation="0.5"   className="parallax right-man" />
       <img ref={(el) => parallaxRefs.current[4] = el} src={front} alt="" data-speedx="0.0" data-speedy="0.02"  data-speedz="0.01" data-rotation="0.01"   className="parallax front" />
-      <img ref={(el) => parallaxRefs.current[5] = el} src={light} alt="" className="light" />
+      <img ref={(el) => parallaxRefs.current[5] = el} src={light} alt="" className="light w-screen h-screen" />
     </main>
         
     <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-50'>
