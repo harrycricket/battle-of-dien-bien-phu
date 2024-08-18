@@ -14,6 +14,9 @@ export default {
       grey: '#F3F3F3',
       'dark-grey': '#6B6B6B',
       transparent: 'transparent',
+      primaryRed: '#85090f',
+      cardBgColor: '#fcde6e',
+      yellowText: '#e8b567'
     },
     fontSize: {
       'sm': '12px',

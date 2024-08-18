@@ -87,7 +87,7 @@ const Navbar = () => {
                     Tổng kết
                 </a>
                 <a
-                    href="#hero"
+                    href="#hero-list"
                     className={`${activeMenu === "hero" ? "text-primaryTextColor" : ""} hover:text-primaryTextColor`}
                     onClick={() => handleMenuClick("hero")}
                 >
