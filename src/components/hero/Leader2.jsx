@@ -20,6 +20,7 @@ import VuongThuaVu from "../../assets/heroes/VuongThuaVu.jpg";
 import HoangMinhThao from "../../assets/heroes/HoangMinhThao.jpg";
 import LeQuangBa from "../../assets/heroes/LeQuangBa.jpg";
 import SongHao from "../../assets/heroes/SongHao.jpg";
+import HeroBg from "../../assets/heroes/HeroBg.png";
 
 const leaders = [
   {
@@ -111,33 +112,41 @@ export default function Leader2() {
           指導者と指揮官
         </h2>
       )}
-
-      <Swiper
-        slidesPerView={2}
-        pagination={{
-          clickable: true,
-        }}
-        keyboard={{
-          enabled: true,
-        }}
-        autoplay={{
-          delay: 2000,
-          disableOnInteraction: false,
-        }}
-        modules={[Pagination, Keyboard, Autoplay]}
-        className="w-full"
-      >
-        {leaders.map((leader, index) => (
-          <SwiperSlide key={index} className="bg-center bg-cover w-[600px]">
-            <Hero
-              fullName={leader.fullName.toUpperCase()}
-              description={isVietnamese ? leader.description : leader.japanese}
-              year={leader.year}
-              image={leader.image}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div style={{
+        backgroundImage: `url(${HeroBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',  
+        width: '100%',
+      }}
+        className="flex justify-center items-center">
+        <Swiper
+          slidesPerView={2}
+          pagination={{
+            clickable: true,
+          }}
+          keyboard={{
+            enabled: true,
+          }}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          modules={[Pagination, Keyboard, Autoplay]}
+          className="w-full"
+        >
+          {leaders.map((leader, index) => (
+            <SwiperSlide key={index} className="bg-center bg-cover w-[600px]">
+              <Hero
+                fullName={leader.fullName.toUpperCase()}
+                description={isVietnamese ? leader.description : leader.japanese}
+                year={leader.year}
+                image={leader.image}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }
