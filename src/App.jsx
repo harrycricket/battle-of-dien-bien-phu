@@ -15,11 +15,11 @@ import useSessionTransitionState from './hooks/useSessionTransitionState';
 function App() {
   const { index, getIsBeginning, getIsEnd } = useSessionTransitionState();
   const handleWheel = (event) => {
-    console.log("event.deltaY: ", event.deltaY);
-    console.log("index: ", index);
-    console.log("getIsBegin(index): ", getIsBeginning(index));
-    console.log("getIsEnd(index): ", getIsEnd(index));
-    console.log("------------------------------------");
+    // console.log("event.deltaY: ", event.deltaY);
+    // console.log("index: ", index);
+    // console.log("getIsBegin(index): ", getIsBeginning(index));
+    // console.log("getIsEnd(index): ", getIsEnd(index));
+    // console.log("------------------------------------");
     if (event.deltaY > 0 && !getIsEnd(index)) {
       event.preventDefault();
     } else if (event.deltaY < 0 && !getIsBeginning(index)) {
