@@ -106,6 +106,13 @@ const Navbar = () => {
                         Các vị anh hùng
                     </a>
                     <a
+                        href="#victory"
+                        className={`vertical-text text-sm uppercase ${getSession() === "victory" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
+                        onClick={() => handleMenuClick("victory")}
+                    >
+                        Chiến thắng
+                    </a>
+                    <a
                         href="#conclusion"
                         className={`vertical-text text-sm uppercase ${getSession() === "conclusion" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
                         onClick={() => handleMenuClick("conclusion")}

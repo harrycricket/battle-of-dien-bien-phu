@@ -45,9 +45,9 @@ function App() {
         <Context />
         <Battle />
         <Hero />
+        <Victory />
         <Conclusion />
         <Footer />
-        <Victory />
       </NextUIProvider>
     </>
   );
