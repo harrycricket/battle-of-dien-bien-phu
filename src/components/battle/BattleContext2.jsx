@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 
-export default function BattleContext3() {
+export default function BattleContext2() {
   const leftSideRef = useRef(null);
   const rightSideRef = useRef(null);
 
@@ -71,20 +71,20 @@ export default function BattleContext3() {
           className='left-side min-w-full'
           ref={leftSideRef}
           style={{
-            backgroundImage: `url('/images/battle/dot3.jpg')`,
+            backgroundImage: `url('/images/battle/dot2.webp')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'left',
           }}
         >
-          <div className='context-content-title top-28 h-28' ref={leftSideRef}>
+          <div className='context-content-title top-28 h-28 rounded-lg' ref={leftSideRef}>
             <span
               className='uppercase'
               style={{
                 fontSize: '28px',
               }}
             >
-              Đợt tấn công thứ ba
+              Đợt tấn công thứ hai
             </span>
             <br />
             <span
@@ -94,13 +94,13 @@ export default function BattleContext3() {
                 marginTop: '4px',
               }}
             >
-              01/05/1954 đến 07/05/1954
+              30/03/1954 - 30/04/1954
             </span>
           </div>
 
           <div
             ref={leftSideRef}
-            className='context-content-title top-80 h-48 max-w-96'
+            className='context-content-title top-80 h-48 max-w-96 backdrop-blur-sm'
             style={{
               backgroundColor: 'rgba(255, 255, 255, 0.7)',
               borderRadius: 6,
@@ -117,71 +117,48 @@ export default function BattleContext3() {
             <br />
             <br />
             <ul className='list-disc pl-6 space-y-2 font-normal'>
-              <li>Chiếm được toàn bộ khu vực Điện Biên Phủ</li>
-              <li>Đập đổ kế hoạch Navarre</li>
-              <li>Bắt sống De Castries và toàn bộ quân Pháp chạy trốn</li>
+              <li>Loại khỏi vòng chiến đấu khoảng 5.000 tên địch</li>
+              <li>Khống chế được phần lớn điểm cao phía Đông</li>
+              <li>Kiểm soát sân bay Mường Thanh, hạn chế tiếp viện của địch</li>
             </ul>
           </div>
         </div>
 
         <div className='absolute pt-[100px] pl-[750px]' ref={rightSideRef}>
-          <section className='space-y-9 bg-yellow-50 font-sans pr-8'>
-            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor'>
-              <h2 className='text-lg font-bold'>01/05/1954</h2>
+          <section className='space-y-9 bg-yellow-50 font-sans mt-4 pr-8'>
+            <div className='bg-yellow-500 text-black p-6 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm'>
+              <h2 className='text-lg font-bold'>30/03/1954</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
+                <li>18 giờ, quân ta mở màn đợt tiến công thứ hai</li>
                 <li>
-                  17 giờ chiều, quân ta tấn công vào cứ điểm Hồng Cúm, làm tê
-                  liệt cụm pháo địch
+                  Tiêu diệt hoàn toàn 3 đồn số 1, 2, 4, làm chủ trên mặt đồn số
+                  5
                 </li>
               </ul>
               <br />
-              <h2 className='text-lg font-bold'>02/05/1954</h2>
+              <h2 className='text-lg font-bold'>31/03/1954</h2>
+              <ul className='list-disc pl-10 space-y-2 italic'>
+                <li>Đánh bại các cuộc phản kích của địch lên đồn số 2</li>
+              </ul>
+              <br />
+              <h2 className='text-lg font-bold'>11/04/1954</h2>
+              <ul className='list-disc pl-10 space-y-2 italic'>
+                <li>Trung đoàn 98 tiến công cứ điểm C1 lần thứ hai</li>
+              </ul>
+              <br />
+              <h2 className='text-lg font-bold'>14/04/1954</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
-                  2 giờ sáng, Trung đoàn 209 tiêu diệt trung tâm đề kháng
-                  Dominique
+                  Ta tấn công sân bay Mường Thanh, tiêu diệt một đại đội của
+                  địch
                 </li>
               </ul>
               <br />
-              <h2 className='text-lg font-bold'>03/05/1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>4 cứ điểm: C1, 505, 505A ở phía Đông và 311A ở phía Tây</li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>04/05/1954</h2>
+              <h2 className='text-lg font-bold'>22/04/1954</h2>
               <ul className='list-disc pl-10 space-y-2 italic'>
                 <li>
-                  Tiêu diệt 311A, Đại đoàn 308 tiếp tục đánh 311B (Huguette 4)
-                </li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>05/05/1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>
-                  Trung đoàn 174 đặt gần 1 tấn bộc phá trong đường hầm đồi A1
-                </li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>06/05/1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>
-                  Ta tấn công vào đồi A1, C2, cứ điểm 506, Bắc Mường Thanh, cứ
-                  điểm 310, Tây Mường Thanh
-                </li>
-                <li>
-                  Tiêu diệt 506 (Eliane 10), chiếm cứ điểm 311 (Hugaette F)
-                </li>
-              </ul>
-              <br />
-              <h2 className='text-lg font-bold'>07/05/1954</h2>
-              <ul className='list-disc pl-10 space-y-2 italic'>
-                <li>
-                  17 giờ 30 phút, bắt sống De Castries và toàn bộ cơ quan tham
-                  mưu của hắn
-                </li>
-                <li>
-                  Quân ta tiếp tục truy kích tới 24 giờ, bắt sống được toàn bộ
-                  quân địch
+                  Quân ta bất ngờ tấn công vị trí 206 (Huguette 1) và tiêu diệt
+                  hoàn toàn vị trí này
                 </li>
               </ul>
             </div>
