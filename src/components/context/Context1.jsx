@@ -1,7 +1,43 @@
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
+
 export default function Context1() {
+  const leftSideRef = useRef(null);
+  const rightSideRef = useRef(null);
+
+  useEffect(() => {
+    const animateOnScroll = (element, animation) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animation.play();
+          } else {
+            animation.reverse();
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(element);
+    };
+
+    const leftSideAnimation = gsap.fromTo(
+      leftSideRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, paused: true }
+    );
+
+    const rightSideAnimation = gsap.fromTo(
+      rightSideRef.current,
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1, paused: true }
+    );
+
+    animateOnScroll(leftSideRef.current, leftSideAnimation);
+    animateOnScroll(rightSideRef.current, rightSideAnimation);
+  }, []);
+
   return (
-    <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative"
-    >
+    <section id="context" className="h-[100vh] pt-[28px] bg-primaryBgColor relative">
       <h2
         className="context-title w-full text-center"
         style={{
@@ -10,11 +46,10 @@ export default function Context1() {
           lineHeight: 1.4,
           textAlign: "center",
           textTransform: "uppercase",
-          textShadow:
-            "0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)",
+          textShadow: "0.04419417em 0.04419417em 0em rgba(39, 34, 27, 0.400000)",
         }}
       >
-        <span className="relative" style={{ color: "#fcde6e" }} >
+        <span className="relative" style={{ color: "#fcde6e" }}>
           BỐI CẢNH&nbsp;
           <span className="absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow"></span>
         </span>
@@ -24,28 +59,33 @@ export default function Context1() {
         </span>
       </h2>
       <div className="context-content">
-        <div className="left-side"
+        <div
+          className="left-side"
+          ref={leftSideRef}
           style={{
             backgroundImage: `url('/images/context/chiendichtruoc1954.webp')`,
             backgroundSize: 'cover',
             backgroundPosition: `left calc(50% - 40px)`,
             backgroundRepeat: 'no-repeat',
-          }}>
+          }}
+        >
           <div className="context-content-title">
-            <span style={{
-              fontSize: "28px"
-            }}>1946-1953</span>
+            <span style={{ fontSize: "28px" }}>1946-1953</span>
             <br />
-            <span style={{
-              display: "inline-block",
-              fontSize: "24px",
-              marginTop: "4px"
-            }}
-              className="uppercase">Quân và dân ta đã lần lượt đánh bại <br />
-              các chiến lược quân sự của Pháp</span>
+            <span
+              style={{
+                display: "inline-block",
+                fontSize: "24px",
+                marginTop: "4px",
+              }}
+              className="uppercase"
+            >
+              Quân và dân ta đã lần lượt đánh bại <br />
+              các chiến lược quân sự của Pháp
+            </span>
           </div>
         </div>
-        <div className="right-side pt-[100px]">
+        <div className="right-side pt-[100px]" ref={rightSideRef}>
           <div className="relative w-full h-fit">
             <img
               src="/images/context/1947.png"
@@ -53,22 +93,23 @@ export default function Context1() {
               style={{
                 height: '300px',
                 objectFit: 'contain',
-                objectPosition: 'left top'
+                objectPosition: 'left top',
               }}
             />
             <div className="context-content-detail absolute -bottom-[-47px] -left-[-47px] max-w-[540px]">
-              <span style={{
-                fontSize: "16px"
-              }}>CHIẾN DỊCH VIỆT BẮC THU - ĐÔNG NĂM 1947</span>
+              <span style={{ fontSize: "16px" }}>CHIẾN DỊCH VIỆT BẮC THU - ĐÔNG NĂM 1947</span>
               <br />
-              <span style={{
-                display: "inline-block",
-                fontSize: "16px",
-                fontWeight: 400,
-                marginTop: "4px",
-                fontStyle: 'italic',
-              }}
-              >là đòn quyết định làm thất bại hoàn toàn chiến lược đánh nhanh, thắng nhanh của địch, bảo vệ an toàn căn cứ địa cách mạng và đầu não kháng chiến, mở ra giai đoạn mới của cuộc kháng chiến</span>
+              <span
+                style={{
+                  display: "inline-block",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  marginTop: "4px",
+                  fontStyle: 'italic',
+                }}
+              >
+                là đòn quyết định làm thất bại hoàn toàn chiến lược đánh nhanh, thắng nhanh của địch, bảo vệ an toàn căn cứ địa cách mạng và đầu não kháng chiến, mở ra giai đoạn mới của cuộc kháng chiến
+              </span>
             </div>
           </div>
           <div className="relative w-full h-fit mt-6 pr-52 flex justify-end">
@@ -78,27 +119,27 @@ export default function Context1() {
               style={{
                 height: '300px',
                 objectFit: 'contain',
-                objectPosition: 'left top'
+                objectPosition: 'left top',
               }}
             />
-            <div className="context-content-detail absolute -bottom-[-32px] -right-[-12px] max-w-[560px]">
-              <span style={{
-                fontSize: "16px"
-              }}>CHIẾN THẮNG BIÊN GIỚI NĂM 1950</span>
+            <div className="context-content-detail absolute -bottom-[-32px] -right-[-12px] max-w-[560px] fadeInUp">
+              <span style={{ fontSize: "16px" }}>CHIẾN THẮNG BIÊN GIỚI NĂM 1950</span>
               <br />
-              <span style={{
-                display: "inline-block",
-                fontSize: "16px",
-                fontWeight: 400,
-                marginTop: "4px",
-                fontStyle: 'italic',
-              }}
-              >một bước chuyển cơ bản cho cuộc kháng chiến bước vào giai đoạn mới, giai đoạn ta nắm quyền chủ động chiến lược trên chiến trường chính Bắc Bộ, chuyển hẳn sang liên tục tấn công và phản công địch</span>
+              <span
+                style={{
+                  display: "inline-block",
+                  fontSize: "16px",
+                  fontWeight: 400,
+                  marginTop: "4px",
+                  fontStyle: 'italic',
+                }}
+              >
+                một bước chuyển cơ bản cho cuộc kháng chiến bước vào giai đoạn mới, giai đoạn ta nắm quyền chủ động chiến lược trên chiến trường chính Bắc Bộ, chuyển hẳn sang liên tục tấn công và phản công địch
+              </span>
             </div>
           </div>
         </div>
       </div>
-
-    </section >
+    </section>
   );
 }

@@ -1,9 +1,17 @@
 import { create } from "zustand";
 
-export const sessions = ["home", "context", "battle", "cq", "summary", "hero"];
+export const sessions = [
+  "home",
+  "context",
+  "battle",
+  "victory",
+  // "tactic",
+  "hero",
+  "summary"
+];
 
 const initialIsBeginning = [true, true, true, true, true, true];
-const initialIsEnd = [true, false, false, false, false, false];
+const initialIsEnd = [true, true, true, true, true, true];
 
 const getIndexOfSession = (session) => {
   return sessions.findIndex((s) => s === session);
@@ -15,6 +23,8 @@ interface SessionState {
   isBeginning: boolean[];
   transiting: boolean;
   setTransiting: (value: boolean) => void;
+  sliding: boolean;
+  setSliding: (value: boolean) => void;
   setIndex: (value: number) => void;
   getSession: () => string;
   setSession: (value: string) => void;
@@ -35,6 +45,8 @@ const useSessionTransitionState = create<SessionState>((set, get) => ({
   },
   transiting: false, // Initialize transiting
   setTransiting: (value: boolean) => set({ transiting: value }), // Implement setTransiting
+  sliding: false, // Initialize transiting
+  setSliding: (value: boolean) => set({ sliding: value }), // Implement setTransiting
   setSession: (value: string) => {
     const newIndex = getIndexOfSession(value);
     if (newIndex !== -1) {

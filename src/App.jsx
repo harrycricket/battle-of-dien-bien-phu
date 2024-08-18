@@ -13,18 +13,21 @@ import { useEffect } from 'react';
 import useSessionTransitionState from './hooks/useSessionTransitionState';
 
 function App() {
-  const { index, getIsBeginning, getIsEnd } = useSessionTransitionState();
+  const { index, sliding, transiting, getIsBeginning, getIsEnd, onNextSession, onPrevSession } = useSessionTransitionState();
   const handleWheel = (event) => {
-    console.log("event.deltaY: ", event.deltaY);
-    console.log("index: ", index);
-    console.log("getIsBegin(index): ", getIsBeginning(index));
-    console.log("getIsEnd(index): ", getIsEnd(index));
-    console.log("------------------------------------");
-    if (event.deltaY > 0 && !getIsEnd(index)) {
-      event.preventDefault();
-    } else if (event.deltaY < 0 && !getIsBeginning(index)) {
-      event.preventDefault();
+    event.preventDefault();
+    // console.log(`getIsBeginning(${index}): `, getIsBeginning(index));
+    // console.log(`getIsEnd(${index}): `, getIsEnd(index));
+    // console.log(`transiting: ${transiting} - sliding: ${transiting}`);
+    // console.log("Enable to prev: ", (!transiting && !sliding && event.deltaY < 0 && getIsBeginning(index)));
+    // console.log("Enable to next: ", !transiting && !sliding && event.deltaY > 0 && getIsEnd(index));
+    if (!transiting && !sliding && event.deltaY < 0 && getIsBeginning(index)) {
+      onPrevSession();
     }
+    if (!transiting && !sliding && event.deltaY > 0 && getIsEnd(index)) {
+      onNextSession();
+    }
+
   };
 
   useEffect(() => {
@@ -33,7 +36,7 @@ function App() {
     return () => {
       document.removeEventListener('wheel', handleWheel);
     };
-  }, [index]);
+  }, [index, transiting, sliding]);
 
   return (
     <>
@@ -44,10 +47,10 @@ function App() {
         <Home />
         <Context />
         <Battle />
+        <Victory />
         <Hero />
         <Conclusion />
-        <Footer />
-        <Victory />
+        {/* <Footer /> */}
       </NextUIProvider>
     </>
   );
