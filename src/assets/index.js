@@ -5,6 +5,8 @@ import rightMan from './victory/right_man.png';
 import rightMan1 from './victory/right_man1.png';
 import front from './victory/front.png';
 import light from './victory/light.png';
+import firstConclusion from './conclusion/1.jpg';
+import secondConclusion from './conclusion/2.jpg';
 
 
 export{
@@ -14,5 +16,7 @@ export{
     rightMan,
     rightMan1,
     front,
-    light
+    light,
+    firstConclusion,
+    secondConclusion
 };

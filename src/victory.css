@@ -3,6 +3,7 @@
     background-color: #fcde6e;
     height: 100vh;
     width: 100vw;
+    overflow: auto;
 }
 
 .bg-img {
@@ -13,7 +14,7 @@
     position: absolute;
     top: 49%;
     left: 50%;
-    z-index: 1;
+    z-index: 0;
 }
 
 .left-man{
@@ -24,12 +25,33 @@
     z-index: 1;
 }
 
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fcde6e;
+    z-index: 2;
+}
+
+.text h2{
+    font-weight: 100;
+    font-size: 5rem;
+}
+
+.text h1{
+    font-weight: 800;
+    font-size: 6.5rem;
+    line-height: 1.3;
+}
+
 .mid-man{
     position: absolute;
     width: 80%;
     top: 49%;
     left: 50%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .right-man{
@@ -44,7 +66,7 @@
     width: 194.44%;
     top: 90%;
     left: 50%;
-    z-index: 3;
+    z-index: 4;
 }
 
 .light {
@@ -67,8 +89,13 @@
         background-color: white;
     }
 
+    .bg-img{
+        width: 194.44% !important;
+        height: 100% !important;
+    }
+
     .left-man{
-        top: 75%;
+        top: 70%;
     }
     
     .mid-man{
@@ -77,6 +104,14 @@
     
     .right-man{
         top: 65%;
+    }
+
+    .text h1{
+        font-size: 1rem;
+    }
+
+    .text h2{
+        font-size: 0.8rem;
     }
 }
 

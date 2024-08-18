@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-export const sessions = ["home", "context", "battle", "cq", "summary", "hero", "victory"];
+export const sessions = ["home", "context", "battle", "cq", "summary", "hero", "victory", "conclusion"];
 
 const initialIsBeginning = [true, true, true, true, true, true];
 const initialIsEnd = [true, false, false, false, false, false];
