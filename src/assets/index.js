@@ -7,6 +7,9 @@ import front from './victory/front.png';
 import light from './victory/light.png';
 import firstConclusion from './conclusion/1.jpg';
 import secondConclusion from './conclusion/2.jpg';
+import thirdConclusion from './conclusion/3.jpg';
+import tableConclusion from './conclusion/table.jpg';
+import signConclusion from './conclusion/ky.jpg';
 
 
 export{
@@ -18,5 +21,8 @@ export{
     front,
     light,
     firstConclusion,
-    secondConclusion
+    secondConclusion,
+    thirdConclusion,
+    tableConclusion,
+    signConclusion,
 };
