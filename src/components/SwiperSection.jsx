@@ -4,19 +4,15 @@ import { Swiper } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import useSessionTransitionState from '../hooks/useSessionTransitionState';
-function booleanXOR(a, b) {
-    return (a || b) && !(a && b);
-}
+
 const SwiperSection = ({ index, children }) => {
     const swiperRef = useRef(null);
-    const isBeginningRef = useRef(true);
-    const isEndRef = useRef(false);
     const isSliding = useRef(false);
-    const { index: currentIndex, sliding, transiting, setSliding, getIsBeginning, getIsEnd, setIsBeginning, setIsEnd } = useSessionTransitionState();
+    const { index: currentIndex, sliding, transiting, setSliding, setIsBeginning, setIsEnd } = useSessionTransitionState();
 
     const handleWheel = (event) => {
         event.preventDefault();
-        console.log("index : " + index + " - transiting " + transiting + " - sliding " + sliding);
+        // console.log("index : " + index + " - transiting " + transiting + " - sliding " + sliding);
         if (!transiting && !isSliding.current && swiperRef.current) {
             const swiper = swiperRef.current.swiper;
 
@@ -43,6 +39,10 @@ const SwiperSection = ({ index, children }) => {
         }
     };
 
+    useEffect(() => {
+        setIsBeginning(index, true);
+        setIsBeginning(index, false);
+    }, [])
     useEffect(() => {
         if (currentIndex == index)
             document.addEventListener('wheel', handleWheel, { passive: false });

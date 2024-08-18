@@ -3,7 +3,7 @@ import { create } from "zustand";
 export const sessions = ["home", "context", "battle", "cq", "summary", "hero"];
 
 const initialIsBeginning = [true, true, true, true, true, true];
-const initialIsEnd = [true, false, false, false, false, false];
+const initialIsEnd = [true, true, true, true, true, true];
 
 const getIndexOfSession = (session) => {
   return sessions.findIndex((s) => s === session);
