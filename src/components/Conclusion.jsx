@@ -8,20 +8,20 @@ import Conclusion3 from './conclusion/Conclusion3';
 export const Conclusion = () => {
   return (
     <div className="h-screen w-screen overflow-hidden ">
-       <SwiperSection index={5}>
+      <SwiperSection index={5}>
         <SwiperSlide>
-          <Conclusion1/>
+          <Conclusion1 />
         </SwiperSlide>
         <SwiperSlide>
-          <Conclusion2/>
+          <Conclusion2 />
         </SwiperSlide>
         <SwiperSlide>
-          <Conclusion3/>
+          <Conclusion3 />
         </SwiperSlide>
       </SwiperSection>
     </div>
-    
+
   )
 };
 
-export default  Conclusion
+export default Conclusion

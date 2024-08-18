@@ -168,11 +168,11 @@ export default function Context3() {
         }}
       >
         <span className="relative" style={{ color: "#fcde6e" }}>
-          背景&nbsp;
+          歴史的&nbsp;
           <span className="absolute -bottom-3 right-[2px] 3xl:right-1 h-[5px] w-[50px] bg-yellow"></span>
         </span>
         <span className="relative">
-          歴史
+          背景
           <span className="absolute -bottom-3 -left-[2px] 3xl:-left-1 h-[5px] w-[50px] bg-black"></span>
         </span>
       </h2>
@@ -188,7 +188,7 @@ export default function Context3() {
           }}
         >
           <div className="context-content-title">
-            <span style={{ fontSize: "28px" }}>1946-1953</span>
+            <span style={{ fontSize: "28px" }}>1953年11月20日</span>
             <br />
             <span
               style={{
@@ -198,7 +198,7 @@ export default function Context3() {
               }}
               className="uppercase"
             >
-              我々の軍と民衆はフランスの軍事戦略を次々と打ち破った
+              フランス遠征軍司令部がディエンビエンフーに空挺部隊を投入
             </span>
           </div>
         </div>
@@ -225,7 +225,7 @@ export default function Context3() {
               style={{ background: 'rgba(252, 222, 110, 0.82)', padding: '20px 32px' }}
             >
               <span style={{ fontSize: "14px" }}>
-                1953年11月20日: フランス遠征軍司令部がディエンビエンフーに空挺部隊を投入
+                戦局に新たな変化が生じた
               </span>
               <br />
               <span
@@ -237,7 +237,7 @@ export default function Context3() {
                   fontStyle: 'italic',
                 }}
               >
-                戦局に新たな変化が生じた
+                我々の冬春攻勢が準備され、連続して勝利を収める時期にあった。
               </span>
             </div>
 
