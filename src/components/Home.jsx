@@ -134,7 +134,7 @@ const Home = () => {
   const text1 = language === "vi" ? 'CHIẾN DỊCH' : "の戦い";
   const text2 = language === "vi" ? 'ĐIỆN BIÊN PHỦ' : "ディエンビエンフー";
   const text3 = language === "vi" ? 'CHIẾN DỊCH ĐIỆN BIÊN PHỦ' : " ディエンビエンフーの戦い";
-  const paragraphText = language === "vi" ? `Chiến thắng Điện Biên Phủ năm 1954 là một mốc son chói lọi trong lịch sử dân tộc, đánh dấu chấm dứt hoàn toàn ách thống trị của thực dân Pháp trên đất nước ta. Dưới sự lãnh đạo của Đại tướng Võ Nguyên giáp đã tạo ra cuộc chiến "lừng lẫy năm châu, chấn động địa cầu" buộc Pháp phải ký Hiệp định Geneva. Đây là một chiến thắng vĩ đại không chỉ của quân đội nhân dân Việt Nam mà còn là của toàn dân tộc, mở ra một thời kỳ mới cho đất nước.` : `ディエンビエンフーの勝利（1954年）は、我が民族の歴史における輝かしい金字塔であり、フランス植民地支配を完全に終わらせた重要な節目でした。ヴォー・グエン・ザップ大将の指導の下で、「五大陸に轟き、地球を揺るがす」戦いを成し遂げ、フランスにジュネーブ協定への署名を余儀なくさせました。この勝利は、ベトナム人民軍だけでなく、全民族の偉大な勝利であり、国に新たな時代を開きました。`;
+  const paragraphText = language === "vi" ? `Chiến thắng Điện Biên Phủ năm 1954 là một mốc son chói lọi trong lịch sử dân tộc, đánh dấu chấm dứt hoàn toàn ách thống trị của thực dân Pháp trên đất nước ta. Dưới sự lãnh đạo của Đại tướng Võ Nguyên Giáp đã tạo ra cuộc chiến "Lừng lẫy năm châu, chấn động địa cầu" buộc Pháp phải ký Hiệp định Giơ-ne-vơ. Đây là một chiến thắng vĩ đại không chỉ của quân đội nhân dân Việt Nam mà còn là của toàn dân tộc, mở ra một thời kỳ mới cho đất nước.` : `ディエンビエンフーの勝利（1954年）は、我が民族の歴史における輝かしい金字塔であり、フランス植民地支配を完全に終わらせた重要な節目でした。ヴォー・グエン・ザップ大将の指導の下で、「五大陸に轟き、地球を揺るがす」戦いを成し遂げ、フランスにジュネーブ協定への署名を余儀なくさせました。この勝利は、ベトナム人民軍だけでなく、全民族の偉大な勝利であり、国に新たな時代を開きました。`;
   const year = language === "vi" ? "1954" : "1954年";
 
   return (

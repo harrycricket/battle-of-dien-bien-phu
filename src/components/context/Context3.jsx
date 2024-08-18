@@ -124,7 +124,7 @@ export default function Context3() {
                     fontStyle: 'italic',
                   }}
                 >
-                  vào thời điểm các cuộc tiến công Đông - Xuân của ta chuẩn bị bắt đầu và liên tiếp giành thắng lợi
+                  Vào thời điểm các cuộc tiến công Đông - Xuân của ta chuẩn bị bắt đầu và liên tiếp giành thắng lợi
                 </span>
               </div>
 
@@ -145,7 +145,7 @@ export default function Context3() {
                     fontStyle: 'italic',
                   }}
                 >
-                  địch quyết định dùng một bộ phận lực lượng cơ động, nhảy dù đánh chiếm Điện Biên Phủ
+                  Địch quyết định dùng một bộ phận lực lượng cơ động, nhảy dù đánh chiếm Điện Biên Phủ
                 </span>
               </div>
             </div>
