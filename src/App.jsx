@@ -42,7 +42,7 @@ function App() {
   return (
     <>
       <NextUIProvider>
-        {/* <Intro /> */}
+        <Intro />
         <Navbar />
         <Language />
         <Home />

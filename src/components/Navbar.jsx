@@ -2,9 +2,11 @@
 import { useEffect, useState } from "react";
 import useSessionTransitionState from "../hooks/useSessionTransitionState";
 import { IoHome } from "react-icons/io5";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
     const { index, setTransiting, getSession, setSession } = useSessionTransitionState();
+    const language = useSelector((state) => state.language.language);
 
     const handleMenuClick = (menu) => {
         setSession(menu);
@@ -70,35 +72,35 @@ const Navbar = () => {
                 <nav className="flex flex-col items-center gap-6 text-white p-4">
                     <a
                         // href="#"
-                        className={`vertical-text text-sm uppercase ${getSession() === "context" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
+                        className={`${language === "vi" ? "vertical-text text-sm hover:border-l-[2.5px] hover:border-yellow" : "vertical-text-jp text-xl hover:border-r-[2.5px] hover:border-yellow"} uppercase ${getSession() === "context" ? `${language === "vi" ? "border-l-[2.5px] border-yellow" : "border-r-[2.5px] border-yellow"}` : ""}`}
                         onClick={() => handleMenuClick("context")}
                     >
-                        Bối cảnh
+                        {language === "vi" ? "Bối cảnh" : "背景"}
                     </a>
                     <a
                         // href="#"
-                        className={`vertical-text text-sm uppercase ${getSession() === "battle" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
+                        className={`${language === "vi" ? "vertical-text text-sm hover:border-l-[2.5px] hover:border-yellow" : "vertical-text-jp text-xl hover:border-r-[2.5px] hover:border-yellow"} uppercase ${getSession() === "battle" ? `${language === "vi" ? "border-l-[2.5px] border-yellow" : "border-r-[2.5px] border-yellow"}` : ""}`}
                         onClick={() => handleMenuClick("battle")}
                     >
-                        Các đợt tấn công
+                        {language === "vi" ? "Các đợt tấn công" : "攻撃の波"}
                     </a>
                     <a
                         // href="#tactic"
-                        className={`vertical-text text-sm uppercase ${getSession() === "tactic" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
+                        className={`${language === "vi" ? "vertical-text text-sm hover:border-l-[2.5px] hover:border-yellow" : "vertical-text-jp text-xl hover:border-r-[2.5px] hover:border-yellow"} uppercase ${getSession() === "tactic" ? `${language === "vi" ? "border-l-[2.5px] border-yellow" : "border-r-[2.5px] border-yellow"}` : ""}`}
                         onClick={() => handleMenuClick("tactic")}
                     >
-                        Phương châm tác chiến
+                        {language === "vi" ? "Phương châm tác chiến" : "戦略方針"}
                     </a>
                     <a
                         // href="#"
-                        className={`vertical-text text-sm uppercase ${getSession() === "summary" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
+                        className={`${language === "vi" ? "vertical-text text-sm hover:border-l-[2.5px] hover:border-yellow" : "vertical-text-jp text-xl hover:border-r-[2.5px] hover:border-yellow"} uppercase ${getSession() === "summary" ? `${language === "vi" ? "border-l-[2.5px] border-yellow" : "border-r-[2.5px] border-yellow"}` : ""}`}
                         onClick={() => handleMenuClick("summary")}
                     >
-                        Tổng kết
+                        {language === "vi" ? "Tổng kết" : "攻撃の波"}
                     </a>
                     {/* <a
                         href="#hero"
-                        className={`vertical-text text-sm uppercase ${getSession() === "hero" ? "border-l-[2.5px] border-yellow" : ""} hover:border-l-[2.5px] hover:border-yellow`}
+                        className={`${language === "vi" ? "vertical-text text-sm hover:border-l-[2.5px] hover:border-yellow" : "vertical-text-jp text-xl hover:border-r-[2.5px] hover:border-yellow"} uppercase ${getSession() === "hero" ? `${language === "vi" ? "border-l-[2.5px] border-yellow" : "border-r-[2.5px] border-yellow"}` : ""}`}
                         onClick={() => handleMenuClick("hero")}
                     >
                         Các vị anh hùng

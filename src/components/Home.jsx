@@ -248,7 +248,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex-1 text-black bg-yellow pl-6 pr-6 pb-3 pt-12 rounded-lg shadow-lg">
-          <div className={`absolute ${language === "vi" ? "bottom-44" : "bottom-[190px] 3xl:bottom-48"} 3xl:bottom-52 right-0 flex w-auto justify-end gap-4`}>
+          <div className={`absolute ${language === "vi" ? "bottom-52" : "bottom-[190px] 3xl:bottom-44"} 3xl:bottom-52 right-0 flex w-auto justify-end gap-4`}>
             <div className="w-[230px] h-[130px] 3xl:w-[270px] 3xl:h-[150px] overflow-hidden rounded-md">
               <ReactPlayer
                 url="70Y-DienBienPhu.mp4"
