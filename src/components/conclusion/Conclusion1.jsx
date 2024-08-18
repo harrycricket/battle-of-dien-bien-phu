@@ -24,7 +24,7 @@ const Conclusion1 = () => {
     });
   return (
     <section 
-      id='hero' 
+      id='summary' 
       className='h-[100vh] pt-[90px] bg-primaryBgColor relative bg-cover bg-center' 
       style={{ backgroundImage: `url(${firstConclusion})` }}>
         <div className='absolute z-10 top-2 left-[50.75%] 3xl:left-[51.2%] transform -translate-x-1/2'>
@@ -42,11 +42,11 @@ const Conclusion1 = () => {
 
         <div className='w-full h-full flex items-center justify-center px-4 animated-text'>
             <div className='text-center text-white font-bold max-w-5xl bg-black bg-opacity-70 p-6'>
-                <h1 className='text-xxs md:text-8xl lg:text-9xl mb-8 animated-text'>
+                <h1 className='text-xxs md:text-8xl lg:text-9xl mb-8 '>
                     Sau 56 ngày đêm chiến đấu kiên cường, dũng cảm, sáng tạo toàn bộ tập đoàn cứ điểm Điện Biên Phủ “bất khả chiến bại” đã bị quân và dân ta xóa sổ hoàn toàn, chiến dịch lịch sử đã giành được toàn thắng. Quân đội ta đã thắng, cả dân tộc ta đã thắng. Kế hoạch Navarre đã sụp đổ hoàn toàn!
                 </h1>
 
-                <h1 className='text-xxs md:text-8xl lg:text-9xl animated-text'>
+                <h1 className='text-xxs md:text-8xl lg:text-9xl'>
                     Chiến thắng đã đánh dấu chấm hết cho sự ngoan cố, hiếu chiến của thực dân Pháp và đế quốc Mỹ. Chấm dứt hoàn toàn sự đô hộ của chủ nghĩa thực dân Pháp tại Đông Dương, khích lệ nhân dân thế giới đứng lên đấu tranh chống chủ nghĩa thực dân. Buộc Chính phủ Pháp cùng các bên tham chiến phải ngồi vào bàn nghị sự, ký Hiệp định Giơnevơ.
                 </h1>
             </div>

@@ -7,8 +7,7 @@ export const sessions = [
   "victory",
   // "tactic",
   "hero",
-  "summary",
-  "conclusion"
+  "summary"
 ];
 
 const initialIsBeginning = [true, true, true, true, true, true];

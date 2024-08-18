@@ -23,7 +23,7 @@ const Conclusion2 = () => {
     });
   return (
     <section 
-    id='hero' 
+    id='summary' 
     className='h-[100vh] pt-[90px] bg-primaryBgColor relative bg-cover bg-center' 
     style={{ backgroundImage: `url(${secondConclusion})` }}>
       <div className='absolute z-10 top-2 left-[50.75%] 3xl:left-[51.2%] transform -translate-x-1/2'>
@@ -40,12 +40,12 @@ const Conclusion2 = () => {
       </div>
 
       <div className='w-full h-full flex items-center justify-center px-4 animated-text'>
-          <div className='text-center text-white font-bold max-w-5xl bg-black bg-opacity-70 p-6 animated-text'>
+          <div className='text-center text-white font-bold max-w-5xl bg-black bg-opacity-70 p-6'>
               <h1 className='text-xxs md:text-8xl lg:text-9xl mb-8'>
               Thắng lợi đã mở ra một giai đoạn mới, đưa miền Bắc quá độ lên Chủ nghĩa xã hội, xây dựng hậu phương vững chắc cho sự nghiệp đấu tranh giải phóng hoàn toàn miền Nam, thống nhất đất nước, một lần nữa khẳng định đường lối kháng chiến đúng đắn, sáng tạo của Đảng và sự lớn mạnh, trưởng thành vượt bậc của Quân đội Nhân dân Việt Nam.
               </h1>
 
-              <h1 className='text-xxs md:text-8xl lg:text-9xl animated-text'>
+              <h1 className='text-xxs md:text-8xl lg:text-9xl'>
               Chiến thắng Điện Biên Phủ “lừng lẫy năm châu, chấn động địa cầu” là một trong những đỉnh cao chói lọi, được ghi vào lịch sử đấu tranh chống ngoại xâm của dân tộc Việt Nam.
               </h1>
           </div>

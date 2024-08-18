@@ -7,12 +7,12 @@ import Conclusion2 from './conclusion/Conclusion2';
 export const Conclusion = () => {
   return (
     <div className="h-screen w-screen overflow-hidden ">
-       <SwiperSection index={1}>
+       <SwiperSection index={5}>
         <SwiperSlide>
-          <Conclusion1 />
+          <Conclusion1/>
         </SwiperSlide>
         <SwiperSlide>
-          <Conclusion2 />
+          <Conclusion2/>
         </SwiperSlide>
       </SwiperSection>
     </div>
