@@ -11,6 +11,7 @@ import Intro from './pages/Intro';
 import { useEffect } from 'react';
 import useSessionTransitionState from './hooks/useSessionTransitionState';
 import HeroList from './components/hero/HeroList';
+import Heroes from './components/Heroes';
 
 function App() {
   const { index, sliding, transiting, getIsBeginning, getIsEnd, onNextSession, onPrevSession } = useSessionTransitionState();
@@ -49,7 +50,7 @@ function App() {
         <Battle />
         <Victory />
         <Conclusion />
-        <HeroList />
+        <Heroes />
         {/* <Footer /> */}
       </NextUIProvider>
     </>
