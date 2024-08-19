@@ -130,115 +130,89 @@ export default function Tactic3() {
             <div className='flex flex-row gap-4'>
               <div className='bg-yellow-500 w-1/2 text-black p-3 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl mt-8 font-medium text-center my-auto'>
                 {language === 'vi' ? (
-                  <p className='list-disc italic'>
-                    Lực lượng quân ta không quen đánh địa hình bằng phẳng, có
-                    lợi thế đánh vào ban đêm và dễ ẩn nấp. Nếu đánh nhanh thắng
-                    nhanh thì phải đánh cả ngày lẫn đêm liên tục, không phát huy
-                    được hết sức mạnh của quân ta
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      Lực lượng quân ta không quen đánh địa hình bằng phẳng, có
+                      lợi thế đánh vào ban đêm và dễ ẩn nấp. Nếu đánh nhanh
+                      thắng nhanh thì phải đánh cả ngày lẫn đêm liên tục, không
+                      phát huy được hết sức mạnh của quân ta
+                    </p>
+                  </div>
                 ) : (
-                  <p className='list-disc italic'>
-                    私たちの軍隊は平地での戦いに慣れていないため、夜間に戦い、容易に隠れることができるという利点があります。早く戦って早く勝てば、昼も夜も戦い続けなければならず、軍の力を十分に活用することができません
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      私たちの軍隊は平地での戦いに慣れていないため、夜間に戦い、容易に隠れることができるという利点があります。早く戦って早く勝てば、昼も夜も戦い続けなければならず、軍の力を十分に活用することができません
+                    </p>
+                  </div>
                 )}
               </div>
               <div className='bg-yellow-500 w-1/2 text-black p-3 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl mt-8 font-medium text-center my-auto'>
                 {language === 'vi' ? (
-                  <p className='list-disc italic'>
-                    Tình hình đã thay đổi, Pháp không còn trạng thái "lâm thời
-                    phòng ngự" mà đã được xây dựng thành tập đoàn cứ điểm vững
-                    chắc với sự yểm trợ của pháo binh và không quân mạnh mẽ
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      Tình hình đã thay đổi, Pháp không còn trạng thái "lâm thời
+                      phòng ngự" mà đã được xây dựng thành tập đoàn cứ điểm vững
+                      chắc với sự yểm trợ của pháo binh và không quân mạnh mẽ
+                    </p>
+                  </div>
                 ) : (
-                  <p className='list-disc italic'>
-                    状況は変わり、フランスはもはや「一時的な防衛」状態ではなく、強力な砲兵と空軍の支援によって強固な基地を築いた。
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      状況は変わり、フランスはもはや「一時的な防衛」状態ではなく、強力な砲兵と空軍の支援によって強固な基地を築いた。
+                    </p>
+                  </div>
                 )}
               </div>
               <div className='bg-yellow-500 w-1/2 text-black p-3 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl mt-8 font-medium text-center my-auto'>
                 {language === 'vi' ? (
-                  <p className='list-disc italic'>
-                    Địa hình Điện Biên Phủ dễ thủ khó công nên chọn cách đánh
-                    chắc, tiến chắc, bao vây và cắt tiếp tế của địch để dồn địch
-                    vào tình thế khó khăn rồi tấn công sẽ dễ hơn
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      Địa hình Điện Biên Phủ dễ thủ khó công nên chọn cách đánh
+                      chắc, tiến chắc, bao vây và cắt tiếp tế của địch để dồn
+                      địch vào tình thế khó khăn rồi tấn công sẽ dễ hơn
+                    </p>
+                  </div>
                 ) : (
-                  <p className='list-disc italic'>
-                    ディエンビエンフーの地形は守りやすく攻めにくいので、しっかり攻めて着実に進み、敵の補給を包囲して遮断して敵を窮地に陥れてから攻めるという選択をすると楽になります
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      ディエンビエンフーの地形は守りやすく攻めにくいので、しっかり攻めて着実に進み、敵の補給を包囲して遮断して敵を窮地に陥れてから攻めるという選択をすると楽になります
+                    </p>
+                  </div>
                 )}
               </div>
               <div className='bg-yellow-500 w-1/2 text-black p-3 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl mt-8 font-medium text-center my-auto'>
                 {language === 'vi' ? (
-                  <p className='list-disc italic'>
-                    Bác Hồ đã dặn: "Trận này chỉ được thắng không được thua vì
-                    thua là hết vốn"
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      Bác Hồ đã dặn: "Trận này chỉ được thắng không được thua vì
+                      thua là hết vốn"
+                    </p>
+                  </div>
                 ) : (
-                  <p className='list-disc italic'>
-                    ホーおじさんは、「この試合は勝つことしかできず、負けることはできない。負けたら資本がなくなってしまうからだ。」と言いました。
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      ホーおじさんは、「この試合は勝つことしかできず、負けることはできない。負けたら資本がなくなってしまうからだ。」と言いました。
+                    </p>
+                  </div>
                 )}
               </div>
               <div className='bg-yellow-500 w-1/2 text-black p-3 rounded-md shadow-md bg-rgbaBgColor backdrop-blur-sm text-2xl mt-8 font-medium text-center my-auto'>
                 {language === 'vi' ? (
-                  <p className='list-disc italic'>
-                    Đánh nhanh thắng nhanh mang tính chủ quan và có phần mạo
-                    hiểm
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      Đánh nhanh thắng nhanh mang tính chủ quan và có phần mạo
+                      hiểm
+                    </p>
+                  </div>
                 ) : (
-                  <p className='list-disc italic'>
-                    すぐに勝つことは主観的であり、ある程度のリスクを伴います
-                  </p>
+                  <div className=' flex items-center h-72'>
+                    <p className='list-disc italic'>
+                      すぐに勝つことは主観的であり、ある程度のリスクを伴います
+                    </p>
+                  </div>
                 )}
               </div>
             </div>
-            {/* {language === 'vi' ? (
-                <ul className='list-disc pl-10 space-y-2 italic'>
-                  <li className=''>
-                    
-                  </li>
-                  <li>
-                    Đánh nhanh thắng nhanh mang tính chủ quan và có phần mạo
-                    hiểm
-                  </li>
-                  <li>
-                    Lực lượng quân ta không quen đánh địa hình bằng phẳng, có
-                    lợi thế đánh vào ban đêm và dễ ẩn nấp. Nếu đánh nhanh thắng
-                    nhanh thì phải đánh cả ngày lẫn đêm liên tục, không phát huy
-                    được hết sức mạnh của quân ta
-                  </li>
-                  <li>
-                    Tình hình đã thay đổi, Pháp không còn trạng thái "lâm thời
-                    phòng ngự" mà đã được xây dựng thành tập đoàn cứ điểm vững
-                    chắc với sự yểm trợ của pháo binh và không quân mạnh mẽ
-                  </li>
-                  <li>
-                    Địa hình Điện Biên Phủ dễ thủ khó công nên chọn cách đánh
-                    chắc, tiến chắc, bao vây và cắt tiếp tế của địch để dồn địch
-                    vào tình thế khó khăn rồi tấn công sẽ dễ hơn
-                  </li>
-                </ul>
-              ) : (
-                <ul className='list-disc pl-10 space-y-2 italic'>
-                  <li className=''>
-                    ホーおじさんは、「この試合は勝つことしかできず、負けることはできない。負けたら資本がなくなってしまうからだ。」と言いました。
-                  </li>
-                  <li>
-                    すぐに勝つことは主観的であり、ある程度のリスクを伴います
-                  </li>
-                  <li>
-                    私たちの軍隊は平地での戦いに慣れていないため、夜間に戦い、容易に隠れることができるという利点があります。早く戦って早く勝てば、昼も夜も戦い続けなければならず、軍の力を十分に活用することができません
-                  </li>
-                  <li>
-                    状況は変わり、フランスはもはや「一時的な防衛」状態ではなく、強力な砲兵と空軍の支援によって強固な基地を築いた。
-                  </li>
-                  <li>
-                    ディエンビエンフーの地形は守りやすく攻めにくいので、しっかり攻めて着実に進み、敵の補給を包囲して遮断して敵を窮地に陥れてから攻めるという選択をすると楽になります
-                  </li>
-                </ul>
-              )} */}
-            {/* </div> */}
           </section>
         </div>
       </div>
