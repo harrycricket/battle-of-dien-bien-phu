@@ -32,11 +32,11 @@ const Conclusion1 = () => {
             ) : (
                 <>
                 <span className="text-white relative">
-                    総括&nbsp;
+                    総&nbsp;
                     <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-yellow"></span>
                 </span>
                 <span className="text-black relative">
-                    結論
+                    括
                     <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
                 </span>
                 </>
@@ -72,7 +72,7 @@ const Conclusion1 = () => {
                         1954年5月7日
                         </h1>
                         <h1 className='text-4xl md:text-8xl lg:text-9xl mb-4 text-black font-extrabold text-shadow-cus uppercase'>
-                        Dien Bien Phuで勝利を収める
+                        ディエンビエンフーで勝利を収める
                         <br />
                         "五大陸に響き渡り、地球を揺るがす"
                         </h1>

@@ -103,11 +103,11 @@ export const Victory = () => {
             ) : (
               <>
                 <span className="text-white relative">
-                  勝利&nbsp;
+                  ディエンビエンフー&nbsp;
                   <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-white"></span>
                 </span>
                 <span className="text-yellow relative">
-                  DIEN BIEN PHU
+                  勝利
                   <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
                 </span>
               </>
@@ -147,7 +147,7 @@ export const Victory = () => {
             <>
               <div className='text parallax'>
                 <h2>1954年5月7日</h2>
-                <h1>勝利Dien Bien Phu</h1>
+                <h1>ディエンビエンフー勝利</h1>
               </div>
             </>
           )

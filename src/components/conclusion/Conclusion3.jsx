@@ -45,11 +45,11 @@ const Conclusion3 = () => {
                 ) : (
                     <>
                     <span className="text-white relative">
-                        総括&nbsp;
+                        総&nbsp;
                         <span className="absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-yellow"></span>
                     </span>
                     <span className="text-black relative">
-                        結論
+                        括
                         <span className="absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black"></span>
                     </span>
                     </>
