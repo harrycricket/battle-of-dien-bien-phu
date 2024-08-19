@@ -253,7 +253,7 @@ export default function Context4() {
               ref={(el) => (rightSideRefs.current[1] = el)}
               style={{ background: 'rgba(252, 222, 110, 0.82)', padding: '20px 32px' }}
             >
-              <span style={{ fontSize: "16px" }}>ディエンビエンフー戦役の開始</span>
+              <span style={{ fontSize: "16px" }}>歴史的なディエンビエンフー戦役の開始</span>
               <br />
               <span
                 style={{

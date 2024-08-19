@@ -190,7 +190,7 @@ export default function Context2() {
               className="uppercase"
             >
               フランス植民地勢力とアメリカの介入 <br />
-              ナヴァ計画を発表
+              がナヴァ計画を発表
             </span>
           </div>
         </div>
