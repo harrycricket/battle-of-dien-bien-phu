@@ -163,16 +163,7 @@ const Home = () => {
             </span>
           </h1>
         ) : (
-          <h1 className='text-xl 3xl:text-[30px] font-semibold mb-6'>
-            <span className='text-white relative'>
-              DIEN BIEN PHU&nbsp;
-              <span className='absolute -bottom-1 right-[2px] 3xl:right-1 h-[2.5px] w-[40px] bg-yellow'></span>
-            </span>
-            <span className='text-black relative'>
-              作戦
-              <span className='absolute -bottom-1 -left-[2px] 3xl:-left-1 h-[2.5px] w-[40px] bg-black'></span>
-            </span>
-          </h1>
+          <></>
         )}
       </div>
 
